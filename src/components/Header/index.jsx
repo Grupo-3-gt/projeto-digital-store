@@ -1,6 +1,7 @@
 import "./style.css";
 import logo from "../../assets/img/svg/logo-header.svg";
 import cartIcon from "../../assets/img/svg/mini-cart.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -17,8 +18,8 @@ function Header() {
                 </button> */}
           </div>
           <div className="div-buttons">
-            <a href="">Cadastre-se</a>
-            <a href="">Entrar</a>
+            <Link to="/register">Cadastre-se</Link>
+            <Link to="/login">Entrar</Link>
           </div>
           <button className="button-cart">
             <img src={cartIcon} alt="" />
