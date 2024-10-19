@@ -1,0 +1,42 @@
+/* .card-content{
+    width: 292px;
+    height: 321px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    background: var(--white);
+    margin-top:1699px;
+} */
+
+.card-list{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+
+
+}
+
+.image{
+    width: 248px;
+  transform: rotate(-30deg);
+ 
+
+}
+
+.card-box{
+  background-color: #f5f5f5;
+    width: 292px;
+    height: 439px;
+    margin-bottom: 50px;
+  
+
+}
+
+.image-box{
+    background-color: #ffffff;
+    height: 321px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
