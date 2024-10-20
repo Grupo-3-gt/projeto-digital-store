@@ -1,10 +1,14 @@
-import Header from '../../components/Header/index'
+import Header from "../../components/Header/index";
+import Card from "../../Components/ProductCard";
+import "./style.css";
 
 function HomePage() {
   return (
     <div>
-      <Header/>
-      <h1>Home Page</h1>
+      {/* <Header /> */}
+      <main>
+        <Card />
+      </main>
     </div>
   );
 }
