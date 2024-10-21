@@ -1,13 +1,13 @@
 import "./style.css";
-import tenisImage from "./img/TênisK-SwissV8.png";
+import tenisImage from "../../assets/img/png-jpeg/tenis.png"
 import { Link } from "react-router-dom";
 import arrowRight from "../../assets/img/svg/Line.svg"
 
 function Card() {
+  // 1
   return (
     <section className="container-cards">
       <div className="trending-products">
-        {/* adicionei uma classname no h3 e no a */}
         <h3 className="text-trendin-gproducts">Produtos em alta</h3>
 
         <Link className="text-see-all" to="/products">
