@@ -1,0 +1,21 @@
+.containe{
+
+}
+.imageOffer {
+}
+
+.special-offer{
+    width: 116px;
+    height: 22px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+h2{
+    color: var(dark-gray-2);
+}
+.offer-button{
+    background-color: var(--primary);
+    border: none;
+    color: var(--light-gray-3);
+}
