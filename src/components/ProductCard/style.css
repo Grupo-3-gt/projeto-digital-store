@@ -1,44 +1,44 @@
- .trending-products{
-   display: flex;
-   justify-content: space-between;
-   margin: 12px;
- }
+.trending-products {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px;
+}
 
- .text-trending-products{
-    color: var(--dark-gray-2);
- }
+.text-trending-products {
+  color: var(--dark-gray-2);
+}
 
- .text-see-all{
-    text-decoration: none;
-    color: var(--primary);
- }
+.text-see-all {
+  text-decoration: none;
+  color: var(--primary);
+}
 
- .container-cards{
-    width: 1300px;
- }
+.container-cards {
+  width: 1300px;
+}
 
-.card-list{
+.card-list {
   display: flex;
   list-style: none;
   gap: 15px;
   flex-wrap: wrap;
 }
 
-.image{
-  width: 248px;
+.image {
+  width: 78%;
   transform: rotate(-30deg);
 }
 
-.card-box{
+.card-box {
   background-color: var(--light-gray-3);
-  width: 292px;
+
   margin-bottom: 20px;
-  flex: 1 1 1%;
+  flex: 1 1 40%;
 }
 
-.image-box{
+.image-box {
   background-color: #ffffff;
-  height: 321px;
+  height: 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,49 +46,56 @@
   position: relative;
 }
 
-.discount{
-    background-color:#E7FF86;
-   width: 96px;
-   padding: 10px 0;
-   border-radius: 29px;
-   font-size: 14px;
-   position: absolute;
-   top: 20px;
-   left: 15px;
-   text-align: center;
-   font-weight: 700;
+.discount {
+  background-color: #e7ff86;
+  width: 96px;
+  padding: 10px 0;
+  border-radius: 29px;
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  text-align: center;
+  font-weight: 700;
 }
 
-.card-content{
+.card-content {
   display: flex;
   flex-direction: column;
   padding: 15px 0;
   gap: 5px;
 }
 
-.old-price{
-    color: var(--light-gray);
-    text-decoration: line-through;
-    margin-right: 10px;
+.old-price {
+  color: var(--light-gray);
+  text-decoration: line-through;
+  margin-right: 10px;
 }
 
-.new-price{
-    color: var(--dark-gray);
-    font-weight: 700;
- 
+.new-price {
+  color: var(--dark-gray);
+  font-weight: 700;
 }
 
-h2{
-    color: var(--dark-gray-2);
-    font-weight: 400;
-
+h2 {
+  color: var(--dark-gray-2);
+  font-weight: 400;
 }
 
-p{
-    color: var(--light-gray);
+p {
+  color: var(--light-gray);
 }
 
 @media (min-width: 532px) {
-    .card-box {
-        flex: 1 1 20%;
-    }
+  .card-box {
+    flex: 1 1 20%;
+  }
+
+  /* .image{
+      width: 248px;
+    } */
+
+  .image-box {
+    height: 221px;
+  }
+}
