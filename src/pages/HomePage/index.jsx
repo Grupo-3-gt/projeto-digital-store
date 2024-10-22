@@ -1,5 +1,6 @@
 import Header from "../../components/Header/index";
-import Card from "../../Components/ProductCard";
+import Card from "../../Components/ProductCard/index";
+import Footer from "../../components/Footer/index"
 import "./style.css";
 
 function HomePage() {
@@ -9,6 +10,7 @@ function HomePage() {
       <main>
         <Card />
       </main>
+      <Footer />
     </div>
   );
 }
