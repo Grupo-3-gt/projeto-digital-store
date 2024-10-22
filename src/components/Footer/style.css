@@ -35,19 +35,34 @@ footer{
     flex-direction: column;
     gap: 20px;
 }
-.card-title{
-}
 .informations nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.informations a{
+.footer-link{
     text-decoration: none;
     color: white;
+    position: relative;
 }
-.footer-container p{
-    color: white;
+.footer-link:hover{
+    cursor: pointer;
+    color: #C92071;
+    transition: 250ms ease-in;
+}
+.footer-link::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 2px;
+    background-color: rgb(56, 52, 44);
+    transition: 1s ease;
+}
+.footer-link:hover:before{
+    width: 60%;
+    background-color: #C92071;
 }
 .informations-place{
     width: 220px;
