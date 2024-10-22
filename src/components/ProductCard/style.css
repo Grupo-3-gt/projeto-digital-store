@@ -77,12 +77,12 @@
   font-weight: 700;
 }
 
-h2 {
+.tenis-name {
   color: var(--dark-gray-2);
   font-weight: 400;
 }
 
-p {
+.tenis-p {
   color: var(--light-gray);
 }
 
