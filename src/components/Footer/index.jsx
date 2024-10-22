@@ -49,8 +49,8 @@ function Footer(){
                     <div className="footer-card">
                         <h3 className="card-title">Contato</h3>
                         <div className="informations-place">
-                            <p>Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161</p>
-                            <p>(85) 3051-3411</p>
+                            <p className="place-address">Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161</p>
+                            <p className="number">(85) 3051-3411</p>
                         </div>
                     </div>
                 </div>
