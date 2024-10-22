@@ -1,5 +1,5 @@
 import "./style.css";
-import tenisImage from "../../assets/img/png-jpeg/tenis.png"
+import tenisImage from "../../assets/img/png-jpeg/tenis.png";
 import { Link } from "react-router-dom";
 import arrowRight from "../../assets/img/svg/Line.svg"
 
@@ -21,7 +21,7 @@ function Card() {
           </div>
           <div className="card-content">
             <p className="tenis-p">Tênis</p>
-            <h2>K-Swiss V8 - Masculino</h2>
+            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
             <div className="price-section">
               <span className="old-price">$200</span>
               <span className="new-price">$100</span>
@@ -34,8 +34,8 @@ function Card() {
             <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
           </div>
           <div className="card-content">
-            <p>Tênis</p>
-            <h2>K-Swiss V8 - Masculino</h2>
+            <p className="tenis-p">Tênis</p>
+            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
             <div className="price-section">
               <span className="old-price">$200</span>
               <span className="new-price">$100</span>
@@ -47,8 +47,8 @@ function Card() {
             <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
           </div>
           <div className="card-content">
-            <p>Tênis</p>
-            <h2>K-Swiss V8 - Masculino</h2>
+            <p className="tenis-p">Tênis</p>
+            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
             <div className="price-section">
               <span className="old-price">$200</span>
               <span className="new-price">$100</span>
@@ -60,8 +60,8 @@ function Card() {
             <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
           </div>
           <div className="card-content">
-            <p>Tênis</p>
-            <h2>K-Swiss V8 - Masculino</h2>
+            <p className="tenis-p">Tênis</p>
+            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
             <div className="price-section">
               <span className="old-price">$200</span>
               <span className="new-price">$100</span>
@@ -73,8 +73,8 @@ function Card() {
             <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
           </div>
           <div className="card-content">
-            <p>Tênis</p>
-            <h2>K-Swiss V8 - Masculino</h2>
+            <p className="tenis-p">Tênis</p>
+            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
             <div className="price-section">
               <span className="old-price">$200</span>
               <span className="new-price">$100</span>
@@ -86,8 +86,8 @@ function Card() {
             <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
           </div>
           <div className="card-content">
-            <p>Tênis</p>
-            <h2>K-Swiss V8 - Masculino</h2>
+            <p className="tenis-p">Tênis</p>
+            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
             <div className="price-section">
               <span className="old-price">$200</span>
               <span className="new-price">$100</span>
@@ -99,8 +99,8 @@ function Card() {
             <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
           </div>
           <div className="card-content">
-            <p>Tênis</p>
-            <h2>K-Swiss V8 - Masculino</h2>
+            <p className="tenis-p">Tênis</p>
+            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
             <div className="price-section">
               <span className="old-price">$200</span>
               <span className="new-price">$100</span>
@@ -112,8 +112,8 @@ function Card() {
             <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
           </div>
           <div className="card-content">
-            <p>Tênis</p>
-            <h2>K-Swiss V8 - Masculino</h2>
+            <p className="tenis-p">Tênis</p>
+            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
             <div className="price-section">
               <span className="old-price">$200</span>
               <span className="new-price">$100</span>

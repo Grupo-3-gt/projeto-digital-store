@@ -5,7 +5,7 @@ import "./style.css";
 function HomePage() {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <main>
         <Card />
       </main>
