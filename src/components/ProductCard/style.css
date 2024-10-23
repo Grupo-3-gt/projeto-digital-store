@@ -15,6 +15,7 @@
 
 .container-cards {
   width: 1300px;
+  z-index: 1;
 }
 
 .card-list {
