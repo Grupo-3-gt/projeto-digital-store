@@ -1,0 +1,114 @@
+.trending-products {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px;
+}
+
+.text-trending-products {
+  color: var(--dark-gray-2);
+}
+
+.text-see-all {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.container-cards {
+  width: 1300px;
+  max-width: 100%;
+}
+
+.card-list {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.image {
+  width: 78%;
+  transform: rotate(-30deg);
+}
+
+.card-box {
+  background-color: var(--light-gray-3);
+  margin-bottom: 20px;
+  flex: 1 1 40%;
+}
+
+.image-box {
+  background-color: #ffffff;
+  height: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  position: relative;
+}
+
+.discount {
+  background-color: #e7ff86;
+  width: 96px;
+  height: auto;
+  padding: 8px 0;
+  border-radius: 29px;
+  font-size: 1rem;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 1115px){
+  .discount{
+ width: 70px;
+ font-size: 0.8rem;
+ top: 10px;
+ left: 8px;
+ padding: 5px 0;
+  }
+ 
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  gap: 5px;
+}
+
+.old-price {
+  color: var(--light-gray);
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.new-price {
+  color: var(--dark-gray);
+  font-weight: 700;
+}
+
+.tenis-name {
+  color: var(--dark-gray-2);
+  font-weight: 400;
+}
+
+.tenis-p {
+  color: var(--light-gray);
+}
+
+@media (min-width: 532px) {
+  .card-box {
+    flex: 1 1 20%;
+  }
+
+  /* .image{
+      width: 248px;
+    } */
+
+  .image-box {
+    height: 221px;
+  }
+}
