@@ -98,6 +98,10 @@ header {
 .navbar a {
   text-decoration: none;
   color: var(--dark-gray-2);
+  &:hover {
+    color: var(--primary);
+    transition: 0.3s;
+  }
 }
 
 .page-active {
@@ -105,6 +109,10 @@ header {
   color: var(--primary) !important;
   font-weight: 700;
   text-underline-offset: 6px;
+}
+
+.display-none {
+  display: none;
 }
 
 @media (min-width: 886px) {

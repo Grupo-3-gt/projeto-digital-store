@@ -13,7 +13,6 @@ function Header() {
 
   useEffect(() => {
     setPage(location.pathname)
-    console.log(page)
   },[location])
 
   function openMenu() {
@@ -24,34 +23,34 @@ function Header() {
     <header>
       <div className="header-container">
         <div className="div-header">
-          <button onClick={openMenu} className="menu-button">
+          <button onClick={openMenu} className={page == "/login" || page == "/register" ? "display-none" : "menu-button"}>
             <img src={menuIcon} alt="" />
           </button>
           <h1 className="logo">
             <img src={logo} alt="Logo digital store" />
           </h1>
-          <div className="div-search">
+          <div className={page == "/login" || page == "/register" ? "display-none" : "div-search"}>
             <input type="text" placeholder="Pesquisar produto..." />
             {/* <button>
                     <img src="" alt="" />
                 </button> */}
           </div>
-          <div className="div-buttons">
+          <div className={page == "/login" || page == "/register" ? "display-none" : "div-buttons"}>
             <Link to="/register">Cadastre-se</Link>
             <Link to="/login">Entrar</Link>
           </div>
-          <button className="button-cart">
+          <button className={page == "/login" || page == "/register" ? "display-none" : "button-cart"}>
             <img src={cartIcon} alt="" />
           </button>
         </div>
-        <nav className="navbar">
-          <Link className={page == "/" && "page-active"} to="/">Home</Link>
-          <Link to="">Produtos</Link>
+        <nav className={page == "/login" || page == "/register" ? "display-none" : "navbar"}>
+          <Link className={page == "/" ? "page-active" : ""} to="/">Home</Link>
+          <Link className={page == "/products" ? "page-active" : ""} to="/products">Produtos</Link>
           <Link to="">Categorias</Link>
           <Link to="">Meus Pedidos</Link>
         </nav>
       </div>
-      {menu && <ModalMenu />}
+      {menu && <ModalMenu page={page} />}
     </header>
   );
 }
