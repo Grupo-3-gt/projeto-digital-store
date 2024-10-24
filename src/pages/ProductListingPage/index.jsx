@@ -1,7 +1,12 @@
+import Header from "../../components/Header"
+
 function ProductsListPage () {
 
     return (
-        <h1>Produts List Page</h1>
+        <> 
+           <Header />
+           <h1>Produts List Page</h1>
+        </>
     )
 }
 

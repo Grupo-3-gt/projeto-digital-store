@@ -1,107 +1,107 @@
 .carousel-indicators button {
-    width: 12px !important;
-    height: 12px !important;
-    background-color: var(--light-gray) !important;
-    border-radius: 50%;
-  }
-  
-  .carousel-indicators .active {
-    background-color: var(--primary) !important;
-  }
-  
-  .container-carousel {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 800px;
-    height: 400px;
-    background-color: gree;
-    border: red 1px solid;
-  }
-  
-  .container-title-carousel {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 1303px;
-    height: 398px;
-    top: 272px;
-    left: 100px;
-    gap: 0px;
-    opacity: 0px;
-    border: black 1px solid;
-  }
-  
-  .title-carousel {
-    width: 510px;
-    height: 352px;
-    top: 318px;
-    left: 100px;
-    gap: 0px;
-    opacity: 0px;
-    border: green 1px solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: row;
-  }
-  
-  .title-carousel > .text-primary {
-    width: 280px;
-    height: 24px;
-    top: 318px;
-    left: 100px;
-    gap: 0px;
-    opacity: 0px;
-    font-family: Text Small Bold;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.75px;
-    text-align: left;
-    color: var(--warning);
-  }
-  
-  .title-carousel > .text-second {
-    width: 495px;
-    height: 68px;
-    top: 514px;
-    left: 100px;
-    gap: 0px;
-    opacity: 0px;
-    font-family: Text Medium;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 34px;
-    letter-spacing: 0.75px;
-    text-align: left;
-  }
-  
-  .title-carousel > .title {
-    width: 510px;
-    height: 132px;
-    top: 362px;
-    left: 100px;
-    gap: 0px;
-    opacity: 0px;
-    font-size: 64px;
-    font-weight: 800;
-    line-height: 66px;
-    letter-spacing: 0.9999998807907104px;
-    text-align: left;
-  }
-  
-  .button-title-carousel {
-    width: 220px;
-    height: 48px;
-    gap: 0px;
-    border-radius: 8px 8px 8px 8px;
-    opacity: 0px;
-    color: var(--white);
-    background-color: var(--primary);
-  }
-  /* img {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: var(--light-gray) !important;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: var(--primary) !important;
+}
+
+.container-carousel {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 400px;
+  background-color: gree;
+  border: red 1px solid;
+}
+
+.container-title-carousel {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 1303px;
+  height: 398px;
+  top: 272px;
+  left: 100px;
+  gap: 0px;
+  opacity: 0px;
+  border: black 1px solid;
+}
+
+.title-carousel {
+  width: 510px;
+  height: 352px;
+  top: 318px;
+  left: 100px;
+  gap: 0px;
+  opacity: 0px;
+  border: green 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: row;
+}
+
+.title-carousel > .text-primary {
+  width: 280px;
+  height: 24px;
+  top: 318px;
+  left: 100px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Text Small Bold;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  text-align: left;
+  color: var(--warning);
+}
+
+.title-carousel > .text-second {
+  width: 495px;
+  height: 68px;
+  top: 514px;
+  left: 100px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Text Medium;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  text-align: left;
+}
+
+.title-carousel > .title {
+  width: 510px;
+  height: 132px;
+  top: 362px;
+  left: 100px;
+  gap: 0px;
+  opacity: 0px;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 66px;
+  letter-spacing: 0.9999998807907104px;
+  text-align: left;
+}
+
+.button-title-carousel {
+  width: 220px;
+  height: 48px;
+  gap: 0px;
+  border-radius: 8px 8px 8px 8px;
+  opacity: 0px;
+  color: var(--white);
+  background-color: var(--primary);
+}
+/* img {
       width: 733.51px;
       height: 431.61px;
       top: 446.91px;
@@ -111,4 +111,3 @@
       rotate: 19.34;
   
   } */
-  
