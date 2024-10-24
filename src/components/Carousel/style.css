@@ -16,8 +16,6 @@
     justify-content: center;
     width: 800px;
     height: 400px;
-    background-color: gree;
-    border: red 1px solid;
   }
   
   .container-title-carousel {
@@ -30,7 +28,6 @@
     left: 100px;
     gap: 0px;
     opacity: 0px;
-    border: black 1px solid;
   }
   
   .title-carousel {
@@ -40,7 +37,6 @@
     left: 100px;
     gap: 0px;
     opacity: 0px;
-    border: green 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -101,14 +97,4 @@
     color: var(--white);
     background-color: var(--primary);
   }
-  /* img {
-      width: 733.51px;
-      height: 431.61px;
-      top: 446.91px;
-      left: 513.25px;
-      gap: 0px;
-      opacity: 0px;
-      rotate: 19.34;
-  
-  } */
   

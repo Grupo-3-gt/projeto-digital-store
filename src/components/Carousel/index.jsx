@@ -68,23 +68,3 @@ function CarouselComponent() {
 
 export default CarouselComponent;
 
-{
-  /* <Carousel.Item>
-        {/* <ExampleCarouselImage text="Second slide" /> */
-}
-//     <img src={img1} alt="" />
-//     <Carousel.Caption>
-//       <h3>Second slide label</h3>
-//       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-//     </Carousel.Caption>
-//   </Carousel.Item>
-//   <Carousel.Item>
-//     {/* <ExampleCarouselImage text="Third slide" /> */}
-//     <img src={img1} alt="" />
-//     <Carousel.Caption>
-//       <h3>Third slide label</h3>
-//       <p>
-//         Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-//       </p>
-//     </Carousel.Caption>
-//   </Carousel.Item> */}
