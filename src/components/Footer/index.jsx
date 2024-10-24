@@ -11,7 +11,7 @@ function Footer(){
             <div className="footer-container">
                 <div className="footer-subcontainer">
                     <div className="footer-logo">
-                        <img src={Logo} alt="Logo digital store" /> 
+                    <a target="_self" href='#'><img src={Logo} alt="Logo digital store" /> </a>
 
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea aliquam tempora placeat iste quisquam nihil enim asperiores, doloremque repudiandae suscipit!</p>
                         
