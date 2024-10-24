@@ -1,21 +1,55 @@
-.containe{
-
+.offer-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: "Inter", sans-serif;
+    justify-content: space-between;
+    align-items: center;
 }
-.imageOffer {
+.offer-tennis{
+    width: 50%;
 }
-
+.offer-tennis img{
+    width: 573px;
+}
+.offer-informations{
+    width: 50%;
+}
 .special-offer{
-    width: 116px;
-    height: 22px;
-    color: var(--primary);
+    color: #C92071;
+    font-size: 14px;
     font-weight: 700;
-}
+    line-height: 22px;
+    letter-spacing: 0.75px;
+    text-align: left;
 
-h2{
-    color: var(dark-gray-2);
+}
+.offer-title{
+    color: #474747;
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0.9999998807907104px;
+    text-align: left;
+}
+.offer-text{
+    color: #474747;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.75px;
 }
 .offer-button{
-    background-color: var(--primary);
-    border: none;
-    color: var(--light-gray-3);
+    background-color: #C92071;
+    ;
+    color: #F5F5F5;
+    width: 200px;
+    height: 40px;
+    gap: 0px;
+    border-radius: 8px 0px 0px 0px;
+    opacity: 0px;
+    angle: 0 deg;
+
 }
+
+

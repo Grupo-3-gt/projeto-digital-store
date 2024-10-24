@@ -1,23 +1,19 @@
-import TenisOffer from "../../assets/img/png-jpeg/Laye.png";
+import ShoeOffer from '../../assets/img/png-jpeg/shoeOffer.png'
 import "./style.css";
+
 function Offer() {
   return (
-    <section className="container">
-      <div className="imageOffer">
-          <img className="shoe-image" src={TenisOffer} alt="" />
+    <div className="offer-container">
+      <div className="offer-tennis">
+          <img src={ShoeOffer} alt="" />
       </div>
-      <div
-        className="information">
-          <p className="special-offer">Oferta especial</p>
-          <h2>Air Jordan edição de colecionador</h2>
-          <p className="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-            facilis voluptas eum quibusdam minima architecto tempore repellat,
-            alias, reiciendis repudiandae temporibus quidem! Voluptatibus
-            nostrum quos at, a enim amet distinctio!/</p>
-           <button className="offer-button">Ver Oferta</button>
-        </div>
-    </section>
+      <div className="offer-informations">
+          <p className='special-offer'>Oferta Especial</p>
+          <h1 className='offer-title'>Air Jordan edição de colecionador</h1>
+          <p className='offer-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni accusamus voluptate sed, quis, totam dolorem corporis mollitia accusantium nesciunt consectetur quaerat obcaecati fuga.</p>
+          <button className='offer-button'>Ver Oferta</button>
+      </div>
+    </div>
   );
 }
 
