@@ -2,17 +2,24 @@ import "./style.css";
 import logo from "../../assets/img/svg/logo-header.svg";
 import cartIcon from "../../assets/img/svg/mini-cart.svg";
 import menuIcon from "../../assets/img/svg/menu.svg";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import ModalMenu from "../Modals/ModalMenu";
 
 function Header() {
   const [menu, setMenu] = useState(false);
+  const location = useLocation()
+  const [page, setPage] = useState(location.pathname)
+
+  useEffect(() => {
+    setPage(location.pathname)
+    console.log(page)
+  },[location])
 
   function openMenu() {
     setMenu(!menu)
   }
 
-  console.log(menu)
   return (
     <header>
       <div className="header-container">
@@ -37,13 +44,14 @@ function Header() {
             <img src={cartIcon} alt="" />
           </button>
         </div>
-        <nav className={menu ? "navbar-active" : "navbar-disable"}>
-          <a href="">Home</a>
-          <a href="">Produtos</a>
-          <a href="">Categorias</a>
-          <a href="">Meus Pedidos</a>
+        <nav className="navbar">
+          <Link className={page == "/" && "page-active"} to="/">Home</Link>
+          <Link to="">Produtos</Link>
+          <Link to="">Categorias</Link>
+          <Link to="">Meus Pedidos</Link>
         </nav>
       </div>
+      {menu && <ModalMenu />}
     </header>
   );
 }

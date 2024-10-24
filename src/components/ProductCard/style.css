@@ -15,8 +15,8 @@
 
 .container-cards {
   width: 1300px;
-  z-index: 1;
   max-width: 100%;
+  margin-top: 100px;
 }
 
 .card-list {
@@ -62,15 +62,14 @@
   line-height: 1.2;
 }
 
-@media (max-width: 1115px){
-  .discount{
- width: 70px;
- font-size: 0.8rem;
- top: 10px;
- left: 8px;
- padding: 5px 0;
+@media (max-width: 1115px) {
+  .discount {
+    width: 70px;
+    font-size: 0.8rem;
+    top: 10px;
+    left: 8px;
+    padding: 5px 0;
   }
- 
 }
 
 .card-content {
@@ -111,5 +110,11 @@
 
   .image-box {
     height: 221px;
+  }
+}
+
+@media (min-width: 631px) {
+  .container-cards {
+      margin-top: 0;
   }
 }

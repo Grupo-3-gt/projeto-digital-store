@@ -3,9 +3,13 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 80px;
   padding: 0 10px;
+  z-index: 1;
   background-color: var(--white);
 }
 
@@ -85,24 +89,22 @@ header {
   cursor: pointer;
 }
 
-.navbar-active {
-  display: flex;
+.navbar {
+  display: none;
   gap: 35px;
-  flex-direction: column;
-  position: absolute;
-  width: 80%;
-  height: 100%;
-  top: 85px;
   background-color: white;
-  z-index: 2;
 }
 
-.navbar-disable {
-  display: none;
-}
-.navbar-active a {
+.navbar a {
   text-decoration: none;
   color: var(--dark-gray-2);
+}
+
+.page-active {
+  text-decoration: underline !important;
+  color: var(--primary) !important;
+  font-weight: 700;
+  text-underline-offset: 6px;
 }
 
 @media (min-width: 886px) {
@@ -114,6 +116,7 @@ header {
 @media (min-width: 631px) {
   header {
     height: 192px;
+    position: static;
   }
 
   .menu-button {
@@ -136,20 +139,8 @@ header {
     display: flex;
   }
 
-  .navbar-active {
-    position: static;
-    flex-direction: row;
-    z-index: 2;
-    height: auto;
-  }
-
-  .navbar-disable {
+  .navbar {
     display: flex;
-    gap: 35px;
-  }
-
-  .navbar-disable a {
-    text-decoration: none;
-    color: var(--dark-gray-2);
+    flex-direction: row;
   }
 }
