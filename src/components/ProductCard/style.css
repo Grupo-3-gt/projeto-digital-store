@@ -16,6 +16,7 @@
 .container-cards {
   width: 1300px;
   max-width: 100%;
+  margin-top: 100px;
 }
 
 .card-list {
@@ -48,14 +49,26 @@
 .discount {
   background-color: #e7ff86;
   width: 96px;
-  padding: 10px 0;
+  height: auto;
+  padding: 8px 0;
   border-radius: 29px;
-  font-size: 14px;
+  font-size: 1rem;
   position: absolute;
   top: 20px;
   left: 15px;
   text-align: center;
   font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 1115px) {
+  .discount {
+    width: 70px;
+    font-size: 0.8rem;
+    top: 10px;
+    left: 8px;
+    padding: 5px 0;
+  }
 }
 
 .card-content {
@@ -96,5 +109,11 @@
 
   .image-box {
     height: 221px;
+  }
+}
+
+@media (min-width: 631px) {
+  .container-cards {
+      margin-top: 0;
   }
 }
