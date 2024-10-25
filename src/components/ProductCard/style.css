@@ -34,6 +34,12 @@
 .card-box {
   margin-bottom: 20px;
   flex: 1 1 40%;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
 }
 
 .image-box {
@@ -103,12 +109,8 @@
     flex: 1 1 20%;
   }
 
-  /* .image{
-      width: 248px;
-    } */
-
   .image-box {
-    height: 221px;
+    height: 23vw;
   }
 }
 
