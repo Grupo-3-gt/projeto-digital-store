@@ -1,11 +1,10 @@
 .offer-container{
-    padding: 5px;
-}
-.offer-subcontainer{
+    background-color: #ffff;
     display: flex;
     font-family: "Inter", sans-serif;
     justify-content: space-between;
     align-items: center;
+    background-color: #ffff;
 }
 .offer-tennis{
     width: 50%;

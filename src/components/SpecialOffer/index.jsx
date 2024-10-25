@@ -4,7 +4,6 @@ import "./style.css";
 function Offer() {
   return (
     <div className="offer-container">
-      <div className="offer-subcontainer">
         <div className="offer-tennis">
             <div className="offer-circle"><img src={ShoeOffer} alt="" /></div>
         </div>
@@ -15,7 +14,6 @@ function Offer() {
             <button className='offer-button'>Ver Oferta</button>
         </div>
       </div>
-    </div>
   );
 }
 
