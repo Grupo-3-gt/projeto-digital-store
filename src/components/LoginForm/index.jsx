@@ -1,11 +1,19 @@
 import IconGmail from "../../assets/img/png-jpeg/gmail-login.png"
 import IconFacebook from "../../assets/img/png-jpeg/Vector.png"
+import tenisLogin1 from "../../assets/img/png-jpeg/tenisLogin1.png"
+import tenisLogin from "../../assets/img/png-jpeg/tenisLogin.png"
+import { Link } from "react-router-dom"
+
 
 function LoginPage(){
     return(
-        <div>
-        <div>
-             <h2>Acesse sua conta</h2>
+        <div className="container-login">
+          <div> 
+            <img src={tenisLogin1} alt="" />
+            <img src={tenisLogin} alt="" />
+          </div>
+        <div className="box-login">
+             <h2 className="">Acesse sua conta</h2>
              <p>Novo cliente? Então <Link>registre-se aqui</Link>.</p>
           <form>
               <div>
@@ -17,7 +25,7 @@ function LoginPage(){
                  <input type="password" id="password" placeholder="Insira sua senha" />
                </div>
                <div>
-                <Link>Esqueci minha senha</Link>
+                {/* <Link>Esqueci minha senha</Link> */}
                </div>
               <button type="submit" className="">Acessar conta</button>
          </form>
@@ -27,12 +35,11 @@ function LoginPage(){
              <Link> <img src={IconFacebook} alt="" /></Link>
            </div>
         </div>
-        <div>
-            <img src="" alt="" />
-        </div>
      
         </div>
 
     )
 
 }
+
+export default LoginPage;
