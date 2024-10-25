@@ -8,7 +8,6 @@ function Card() {
     <section className="container-cards">
       <div className="trending-products">
         <h3 className="text-trendin-gproducts">Produtos em alta</h3>
-
         <Link className="text-see-all" to="/products">
           Ver todos <img src={arrowRight} alt="" />
         </Link>

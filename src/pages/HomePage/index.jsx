@@ -4,6 +4,7 @@ import Card from "../../Components/ProductCard/index";
 import Footer from "../../components/Footer/index";
 import "./style.css";
 import CarouselComponent from "../../components/Carousel";
+import Collection from "../../components/Collection";
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <Header />
       <main>
         <CarouselComponent />
+        <Collection />
         <Card />
         <Offer/>
       </main>
