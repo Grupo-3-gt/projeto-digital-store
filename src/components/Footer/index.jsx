@@ -16,9 +16,9 @@ function Footer(){
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea aliquam tempora placeat iste quisquam nihil enim asperiores, doloremque repudiandae suscipit!</p>
                         
                         <div className="footer-icons">
-                            <img src={IconFacebook} alt="Icon Facebook" /> 
-                            <img src={IconInstagram} alt="Icon Instagram" /> 
-                            <img src={IconTwitter} alt="Icon Twitter" /> 
+                            <Link target="_self" href='#'> <img src={IconFacebook} alt="Icon Facebook" /> </Link>
+                            <Link target="_self" href='#'> <img src={IconInstagram} alt="Icon Instagram" />  </Link>
+                            <Link target="_self" href='#'> <img src={IconTwitter} alt="Icon Twitter" />  </Link>
                         </div>
                     </div>
                     <div className="footer-card">
