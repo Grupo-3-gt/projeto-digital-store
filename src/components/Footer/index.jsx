@@ -11,26 +11,26 @@ function Footer(){
             <div className="footer-container">
                 <div className="footer-subcontainer">
                     <div className="footer-logo">
-                        <img src={Logo} alt="Logo digital store" /> 
+                    <a target="_self" href='#'><img src={Logo} alt="Logo digital store" /> </a>
 
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea aliquam tempora placeat iste quisquam nihil enim asperiores, doloremque repudiandae suscipit!</p>
                         
                         <div className="footer-icons">
-                            <img src={IconFacebook} alt="Icon Facebook" /> 
-                            <img src={IconInstagram} alt="Icon Instagram" /> 
-                            <img src={IconTwitter} alt="Icon Twitter" /> 
+                            <Link target="_self" href='#'> <img src={IconFacebook} alt="Icon Facebook" /> </Link>
+                            <Link target="_self" href='#'> <img src={IconInstagram} alt="Icon Instagram" />  </Link>
+                            <Link target="_self" href='#'> <img src={IconTwitter} alt="Icon Twitter" />  </Link>
                         </div>
                     </div>
                     <div className="footer-card">
                         <h3 className="card-title">Informações</h3>
                         <div className="informations">
                             <nav>
-                                <Link>Sobre Drip Store</Link>
-                                <Link>Segurança</Link>
-                                <Link>Wishlist</Link>
-                                <Link>Blog</Link>
-                                <Link>Trabalhe Conosco</Link>
-                                <Link>Meus Pedidos</Link>
+                                <Link className="footer-link">Sobre Drip Store</Link>
+                                <Link className="footer-link">Segurança</Link>
+                                <Link className="footer-link">Wishlist</Link>
+                                <Link className="footer-link">Blog</Link>
+                                <Link className="footer-link">Trabalhe Conosco</Link>
+                                <Link className="footer-link">Meus Pedidos</Link>
                             </nav>
                         </div>
                     </div>
@@ -38,11 +38,11 @@ function Footer(){
                         <h3 className="card-title">Categorias</h3>
                         <div className="informations">
                             <nav>
-                                <Link>Camisetas</Link>
-                                <Link>Calças</Link>
-                                <Link>Bonés</Link>
-                                <Link>Headphones</Link>
-                                <Link>Tênis</Link>
+                                <Link className="footer-link">Camisetas</Link>
+                                <Link className="footer-link">Calças</Link>
+                                <Link className="footer-link">Bonés</Link>
+                                <Link className="footer-link">Headphones</Link>
+                                <Link className="footer-link">Tênis</Link>
                             </nav>
                         </div>
                     </div>
