@@ -25,7 +25,7 @@ function LoginPage(){
                  <input type="password" id="password" placeholder="Insira sua senha" />
                </div>
                <div>
-                {/* <Link>Esqueci minha senha</Link> */}
+                <Link>Esqueci minha senha</Link>
                </div>
               <button type="submit" className="">Acessar conta</button>
          </form>
