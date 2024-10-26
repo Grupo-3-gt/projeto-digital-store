@@ -11,9 +11,11 @@ function Footer(){
             <div className="footer-container">
                 <div className="footer-subcontainer">
                     <div className="footer-logo">
-                    <a target="_self" href='#'><img src={Logo} alt="Logo digital store" /> </a>
+                        <a target="_self" href='#'>
+                            <img src={Logo} alt="Logo digital store" /> 
+                        </a>
 
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea aliquam tempora placeat iste quisquam nihil enim asperiores, doloremque repudiandae suscipit!</p>
+                        <p>Na Digital Store, você encontra uma seleção exclusiva de sapatos e roupas Nike, unindo conforto e as últimas tendências. Descubra o que há de melhor em moda esportiva e eleve seu estilo a cada passo!</p>
                         
                         <div className="footer-icons">
                             <Link target="_self" href='#'> <img src={IconFacebook} alt="Icon Facebook" /> </Link>
@@ -24,25 +26,25 @@ function Footer(){
                     <div className="footer-card">
                         <h3 className="card-title">Informações</h3>
                         <div className="informations">
-                            <nav>
-                                <Link className="footer-link">Sobre Drip Store</Link>
-                                <Link className="footer-link">Segurança</Link>
-                                <Link className="footer-link">Wishlist</Link>
-                                <Link className="footer-link">Blog</Link>
-                                <Link className="footer-link">Trabalhe Conosco</Link>
-                                <Link className="footer-link">Meus Pedidos</Link>
+                            <nav className="footer-link">
+                                <Link>Sobre Drip Store</Link>
+                                <Link>Segurança</Link>
+                                <Link>Wishlist</Link>
+                                <Link>Blog</Link>
+                                <Link>Trabalhe Conosco</Link>
+                                <Link>Meus Pedidos</Link>
                             </nav>
                         </div>
                     </div>
                     <div className="footer-card">
                         <h3 className="card-title">Categorias</h3>
                         <div className="informations">
-                            <nav>
-                                <Link className="footer-link">Camisetas</Link>
-                                <Link className="footer-link">Calças</Link>
-                                <Link className="footer-link">Bonés</Link>
-                                <Link className="footer-link">Headphones</Link>
-                                <Link className="footer-link">Tênis</Link>
+                            <nav className="footer-link">
+                                <Link>Camisetas</Link>
+                                <Link>Calças</Link>
+                                <Link>Bonés</Link>
+                                <Link>Headphones</Link>
+                                <Link>Tênis</Link>
                             </nav>
                         </div>
                     </div>

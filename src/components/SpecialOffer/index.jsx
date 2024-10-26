@@ -10,10 +10,10 @@ function Offer() {
         <div className="offer-informations">
             <p className='special-offer'>Oferta Especial</p>
             <h1 className='offer-title'>Air Jordan edição de colecionador</h1>
-            <p className='offer-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni accusamus voluptate sed, quis, totam dolorem corporis mollitia accusantium nesciunt consectetur quaerat obcaecati fuga.</p>
+            <p className='offer-text'>Apresentamos a Edição Colecionador das icônicas Air Jordan! Com design exclusivo e detalhes que homenageiam a trajetória de Michael Jordan, essas sneakers são mais do que um calçado; são uma peça de história do esporte.</p>
             <button className='offer-button'>Ver Oferta</button>
         </div>
-      </div>
+    </div>
   );
 }
 
