@@ -36,13 +36,15 @@ function Collection () {
       </div> 
     
         <div class="icons">
-        <h3>Coleções em Destaque</h3>
-            <img className="garments" src={icon1}/>
-            <img className="garments" src={icon2}/>
-            <img className="garments" src={icon3}/>
-            <img className="garments" src={icon4}/>
-            <img className="garments" src={icon5}/>
+            <h3 className="collection-h3-text">Coleções em Destaque</h3> 
+            <div className="icon-options">
+                <div className="circle-icon"><img className="garments" src={icon1}/></div>
+                <div className="circle-icon"><img className="garments" src={icon2}/></div>
+                <div className="circle-icon"><img className="garments" src={icon3}/></div>
+                <div className="circle-icon"><img className="garments" src={icon4}/></div>
+                <div className="circle-icon"><img className="garments" src={icon5}/></div>
             
+            </div>      
         </div>
        </section>
     ) 

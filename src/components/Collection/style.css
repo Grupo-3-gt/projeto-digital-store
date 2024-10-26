@@ -45,6 +45,60 @@
 .garments{ 
     width: 64px;
     height: 64px;
+}
+
+.circle-icon {
+    width:  100px ;
+    height: 100px ;
+    top: 1380px;
+    left: 364px;
+    padding: 20px ;
+    border-radius: 150px ;
+    box-shadow: 0px 4px 25px  #0000000D;
+    background-color: #ffff;
+    width: 94px;
+}
+
+
+.collection-h3-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font: Text Large Bold;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0.75px;
+    text-align: left;
+    color: #474747;
     
+}
+
+
+.icon-options{ display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+
+} 
+
+.icons-name{
+    width: 94px;
+    height: 22px;
+    top: 1496px;
+    left: 825px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
 
 }
