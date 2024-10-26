@@ -107,7 +107,7 @@
   gap: 10px;
 }
 
-@media (max-width: 714px) {
+@media (max-width: 715px) {
   .login-page-image {
     display: none;
   }
