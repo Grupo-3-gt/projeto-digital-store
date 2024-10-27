@@ -2,7 +2,7 @@ import "./style.css";
 import logo from "../../assets/img/svg/logo-header.svg";
 import cartIcon from "../../assets/img/svg/mini-cart.svg";
 import menuIcon from "../../assets/img/svg/menu.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ModalMenu from "../Modals/ModalMenu";
 
@@ -10,6 +10,7 @@ function Header() {
   const [menu, setMenu] = useState(false);
   const location = useLocation()
   const [page, setPage] = useState(location.pathname)
+  const navigate = useNavigate()
 
   useEffect(() => {
     setPage(location.pathname)
@@ -26,7 +27,7 @@ function Header() {
           <button onClick={openMenu} className={page == "/login" || page == "/register" ? "display-none" : "menu-button"}>
             <img src={menuIcon} alt="" />
           </button>
-          <h1 className="logo">
+          <h1 onClick={() => navigate("/")} className="logo">
             <img src={logo} alt="Logo digital store" />
           </h1>
           <div className={page == "/login" || page == "/register" ? "display-none" : "div-search"}>
