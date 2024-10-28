@@ -1,10 +1,16 @@
 import Header from "../../components/Header";
+import Footer from "../../components/Footer/index";
+import "./style.css";
+import RegisterForm from "../../components/RegisterForm";
 
 function RegisterPage() {
   return (
     <div>
       <Header />
-      <h1>RegisterPage</h1>
+      <main>
+        <RegisterForm />
+      </main>
+      <Footer />
     </div>
   );
 }
