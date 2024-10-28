@@ -5,7 +5,7 @@ function RegisterForm() {
     <>
       <div className="container-form">
         <h1> Criar Conta</h1>
-        <form action="" method="post">
+        <form action="" method="post" className="form-register">
           <div className="box-form">
             <h3>Informações Pessoais</h3>
             <hr />
