@@ -2,8 +2,10 @@ import "./style.css";
 import tenisImage from "../../assets/img/png-jpeg/tenis.png";
 import { Link } from "react-router-dom";
 import arrowRight from "../../assets/img/svg/Line.svg"
+import { productData } from "./data";
 
 function Card() {
+  console.log(productData)
   return (
     <section className="container-cards">
       <div className="trending-products">
@@ -13,112 +15,22 @@ function Card() {
         </Link>
       </div>
       <ul className="card-list">
-        <li className="card-box">
-          <div className="image-box"> 
-            <span className="discount">30% OFF</span>
-            <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
+     {productData.slice(0,8).map(product =>
+        <li key={product.id} className="card-box">
+        <div className="image-box"> 
+        {product.descount &&   <span className="discount">30% OFF</span>}
+          <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
+        </div>
+        <div className="card-content">
+          <p className="tenis-p">{product.category}</p>
+          <h2 className="tenis-name">{product.name}</h2>
+          <div className="price-section">
+            <span className="old-price">{product.old_price}</span>
+            <span className="new-price">{product.price}</span>
           </div>
-          <div className="card-content">
-            <p className="tenis-p">Tênis</p>
-            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
-            <div className="price-section">
-              <span className="old-price">$200</span>
-              <span className="new-price">$100</span>
-            </div>
-          </div>
-        </li>
-        <li className="card-box">
-          <div className="image-box">
-          <span className="discount">30% OFF</span>
-            <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
-          </div>
-          <div className="card-content">
-            <p className="tenis-p">Tênis</p>
-            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
-            <div className="price-section">
-              <span className="old-price">$200</span>
-              <span className="new-price">$100</span>
-            </div>
-          </div>
-        </li>
-        <li className="card-box">
-          <div className="image-box">
-            <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
-          </div>
-          <div className="card-content">
-            <p className="tenis-p">Tênis</p>
-            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
-            <div className="price-section">
-              <span className="old-price">$200</span>
-              <span className="new-price">$100</span>
-            </div>
-          </div>
-        </li>
-        <li className="card-box">
-          <div className="image-box">
-            <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
-          </div>
-          <div className="card-content">
-            <p className="tenis-p">Tênis</p>
-            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
-            <div className="price-section">
-              <span className="old-price">$200</span>
-              <span className="new-price">$100</span>
-            </div>
-          </div>
-        </li>
-        <li className="card-box">
-          <div className="image-box">
-            <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
-          </div>
-          <div className="card-content">
-            <p className="tenis-p">Tênis</p>
-            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
-            <div className="price-section">
-              <span className="old-price">$200</span>
-              <span className="new-price">$100</span>
-            </div>
-          </div>
-        </li>
-        <li className="card-box">
-          <div className="image-box">
-            <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
-          </div>
-          <div className="card-content">
-            <p className="tenis-p">Tênis</p>
-            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
-            <div className="price-section">
-              <span className="old-price">$200</span>
-              <span className="new-price">$100</span>
-            </div>
-          </div>
-        </li>
-        <li className="card-box">
-          <div className="image-box">
-            <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
-          </div>
-          <div className="card-content">
-            <p className="tenis-p">Tênis</p>
-            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
-            <div className="price-section">
-              <span className="old-price">$200</span>
-              <span className="new-price">$100</span>
-            </div>
-          </div>
-        </li>
-        <li className="card-box">
-          <div className="image-box">
-            <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
-          </div>
-          <div className="card-content">
-            <p className="tenis-p">Tênis</p>
-            <h2 className="tenis-name">K-Swiss V8 - Masculino</h2>
-            <div className="price-section">
-              <span className="old-price">$200</span>
-              <span className="new-price">$100</span>
-            </div>
-          </div>
-        </li>
+        </div>
+      </li>
+     )}
       </ul>
     </section>
   );
