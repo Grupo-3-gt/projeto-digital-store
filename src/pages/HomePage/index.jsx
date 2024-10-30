@@ -1,10 +1,10 @@
 import Header from "../../components/Header/index";
 import Offer from "../../components/SpecialOffer";
-import Card from "../../Components/ProductCard/index";
 import Footer from "../../components/Footer/index";
 import "./style.css";
 import CarouselComponent from "../../components/Carousel";
 import Collection from "../../components/Collection";
+import Card from "../../components/ProductCard";
 
 function HomePage() {
   return (
@@ -14,7 +14,7 @@ function HomePage() {
         <CarouselComponent />
         <Collection />
         <Card />
-        <Offer/>
+        <Offer />
       </main>
       <Footer />
     </div>
