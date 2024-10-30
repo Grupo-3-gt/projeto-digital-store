@@ -1,13 +1,14 @@
-import Header from "../../components/Header"
+import Header from "../../components/Header";
 
-function ProductsListPage () {
-
-    return (
-        <> 
-           <Header />
-           <h1>Produts List Page</h1>
-        </>
-    )
+function ProductsListPage() {
+  return (
+    <>
+      <Header />
+      <main>
+        <h1>Produts List Page</h1>
+      </main>
+    </>
+  );
 }
 
-export default ProductsListPage
+export default ProductsListPage;
