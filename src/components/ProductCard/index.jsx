@@ -1,36 +1,52 @@
 import "./style.css";
-import tenisImage from "../../assets/img/png-jpeg/tenis.png";
 import { Link } from "react-router-dom";
-import arrowRight from "../../assets/img/svg/Line.svg"
-import { productData } from "./data";
+import arrowRight from "../../assets/img/svg/Line.svg";
+import { useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { ProductContext } from "../../contexts/ProductsContext";
 
 function Card() {
-  console.log(productData)
+  const location = useLocation();
+  const { listProducts } = useContext(ProductContext);
+
+  const filteredProductData =
+    location.pathname === "/" ? listProducts.slice(0, 8) : listProducts;
+
+  console.log(listProducts);
+
   return (
     <section className="container-cards">
-      <div className="trending-products">
-        <h3 className="text-trendin-gproducts">Produtos em alta</h3>
-        <Link className="text-see-all" to="/products">
-          Ver todos <img src={arrowRight} alt="" />
-        </Link>
-      </div>
+      {location.pathname == "/" ? (
+        <div className="trending-products">
+          <h3 className="text-trendin-gproducts">Produtos em alta</h3>
+          <Link className="text-see-all" to="/products">
+            Ver todos <img src={arrowRight} alt="" />
+          </Link>
+        </div>
+      ) : (
+        ""
+      )}
       <ul className="card-list">
-     {productData.slice(0,8).map(product =>
-        <li key={product.id} className="card-box">
-        <div className="image-box"> 
-        {product.descount &&   <span className="discount">30% OFF</span>}
-          <img src={tenisImage} alt="Tênis K-Swiss V8" className="image" />
-        </div>
-        <div className="card-content">
-          <p className="tenis-p">{product.category}</p>
-          <h2 className="tenis-name">{product.name}</h2>
-          <div className="price-section">
-            <span className="old-price">{product.old_price}</span>
-            <span className="new-price">{product.price}</span>
-          </div>
-        </div>
-      </li>
-     )}
+        {filteredProductData.map((product) => (
+          <li key={product.id} className="card-box">
+            <div className="image-box">
+              <span className="discount">30% OFF</span>
+              <img
+                src={product.imagem_url}
+                alt="Tênis K-Swiss V8"
+                className="image"
+              />
+            </div>
+            <div className="card-content">
+              <p className="tenis-p">{product.marca}</p>
+              <h2 className="tenis-name">{product.nome}</h2>
+              <div className="price-section">
+                <span className="old-price">{product.preco_original}</span>
+                <span className="new-price">{product.preco_desconto}</span>
+              </div>
+            </div>
+          </li>
+        ))}
       </ul>
     </section>
   );
