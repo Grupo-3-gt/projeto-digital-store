@@ -1,0 +1,34 @@
+.filter-container {
+    background-color: var(--white);
+    width: 308px;
+    padding: 30px;
+}
+
+.filter-container h2 {
+    border-bottom: 1px solid var(--light-gray-2);
+    padding-bottom: 15px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-group h3 {
+    margin-top: 15px;
+}
+
+.filter-item {
+    display: flex;
+    gap: 5px;
+}
+
+.filter-item input {
+    cursor: pointer;
+}
+
+.filter-item label {
+    cursor: pointer;
+    user-select: none;
+}

@@ -7,12 +7,19 @@ import { ProductContext } from "../../contexts/ProductsContext";
 
 function Card() {
   const location = useLocation();
-  const { listProducts } = useContext(ProductContext);
+  const { listProducts, filterProductsArr } = useContext(ProductContext);
 
-  const filteredProductData =
-    location.pathname === "/" ? listProducts.slice(0, 8) : listProducts;
+  const filteredProduct =
+    filterProductsArr.length !== 0
+      ? listProducts.filter((product) =>
+          filterProductsArr.includes(product.marca.toLowerCase())
+        )
+      : listProducts;
 
-  console.log(listProducts);
+  console.log(filteredProduct);
+
+  // const filteredProductData =
+  //   location.pathname === "/" ? listProducts.slice(0, 8) : listProducts;
 
   return (
     <section className="container-cards">
@@ -27,7 +34,7 @@ function Card() {
         ""
       )}
       <ul className="card-list">
-        {filteredProductData.map((product) => (
+        {filteredProduct.map((product) => (
           <li key={product.id} className="card-box">
             <div className="image-box">
               <span className="discount">30% OFF</span>
