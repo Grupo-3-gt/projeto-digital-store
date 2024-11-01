@@ -4,6 +4,7 @@ export const ProductContext = createContext({});
 
 export const ProductProvider = ({ children }) => {
   const [listProducts, setListProducts] = useState([]);
+  const [filterProductsArr, setFilterProductsArr] = useState([])  
 
   async function getProducts() {
     try {
@@ -25,6 +26,8 @@ export const ProductProvider = ({ children }) => {
     <ProductContext.Provider
       value={{
         listProducts,
+        filterProductsArr,
+        setFilterProductsArr,
       }}
     >
       {children}
