@@ -7,18 +7,28 @@ import { ProductContext } from "../../contexts/ProductsContext";
 
 function Card() {
   const location = useLocation();
-  const { listProducts, filterProductsArr } = useContext(ProductContext);
-   const navigate = useNavigate()
 
-  const filteredProduct =
-    filterProductsArr.length !== 0
-      ? listProducts.filter((product) =>
-          filterProductsArr.includes(product.marca.toLowerCase())
-        )
-      : listProducts;
-      function clickCard(id){
-        navigate(`/products/${id}`)
-      }
+  const { listProducts, filterProductsObj } = useContext(ProductContext);
+  const navigate = useNavigate();
+  
+  function clickCard(id) {
+    navigate(`/products/${id}`);
+  }
+
+  const filteredProduct = listProducts.filter((product) => {
+    return (
+      (filterProductsObj.category.length === 0 ||
+        filterProductsObj.category.includes(product.modelo.toLowerCase())) &&
+      (filterProductsObj.mark.length === 0 ||
+        filterProductsObj.mark.includes(product.marca.toLowerCase()))
+    );
+  });
+
+  // filterProductsArr.length !== 0
+  //   ? listProducts.filter((product) =>
+  //       filterProductsArr.includes(product.marca.toLowerCase())
+  //     )
+  //   :
 
   // const filteredProductData =
   //   location.pathname === "/" ? listProducts.slice(0, 8) : listProducts;
@@ -37,7 +47,11 @@ function Card() {
       )}
       <ul className="card-list">
         {filteredProduct.map((product) => (
-          <li onClick={()=> clickCard(product.id)} key={product.id} className="card-box">
+          <li
+            onClick={() => clickCard(product.id)}
+            key={product.id}
+            className="card-box"
+          >
             <div className="image-box">
               <span className="discount">30% OFF</span>
               <img

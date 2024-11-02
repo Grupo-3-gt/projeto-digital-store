@@ -1,18 +1,73 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect } from "react";
 import "./style.css";
 import { ProductContext } from "../../contexts/ProductsContext";
 
 function FilterProducts() {
-    const {filterProductsArr, setFilterProductsArr} = useContext(ProductContext)
+  const { filterProductsObj, setFilterProductsObj, resetFilter } =
+    useContext(ProductContext);
 
-  function valueInput(event) {
+  function valueInputMark(event) {
     const value = event.target.value;
+    const currentMark = filterProductsObj.mark;
     if (event.target.checked) {
-      setFilterProductsArr([...filterProductsArr, value]);
+      setFilterProductsObj((prevState) => ({
+        ...prevState,
+        mark: [...currentMark, value],
+      }));
     } else {
-      setFilterProductsArr(filterProductsArr.filter((item) => item !== value));
+      setFilterProductsObj((prevState) => ({
+        ...prevState,
+        mark: currentMark.filter((item) => item !== value),
+      }));
     }
   }
+
+  function valueInputCategory(event) {
+    const value = event.target.value;
+    const currentCategory = filterProductsObj.category;
+    if (event.target.checked) {
+      setFilterProductsObj((prevState) => ({
+        ...prevState,
+        category: [...currentCategory, value],
+      }));
+    } else {
+      setFilterProductsObj((prevState) => ({
+        ...prevState,
+        category: currentCategory.filter((item) => item !== value),
+      }));
+    }
+  }
+
+  function valueInputGender(event) {
+    const value = event.target.value;
+    const currentGender = filterProductsObj.gender;
+    if (event.target.checked) {
+      setFilterProductsObj((prevState) => ({
+        ...prevState,
+        gender: [...currentGender, value],
+      }));
+    } else {
+      setFilterProductsObj((prevState) => ({
+        ...prevState,
+        gender: currentGender.filter((item) => item !== value),
+      }));
+    }
+  }
+
+  function valueInputState(event) {
+    const value = event.target.value;
+
+    setFilterProductsObj((prevState) => ({
+      ...prevState,
+      state: [value],
+    }));
+  }
+
+  useEffect(() => {
+    return () => {
+      resetFilter();
+    };
+  }, []);
 
   return (
     <aside className="filter-container">
@@ -21,7 +76,7 @@ function FilterProducts() {
         <h3>Marca</h3>
         <div className="filter-item">
           <input
-            onChange={valueInput}
+            onChange={valueInputMark}
             id="adidas"
             type="checkbox"
             value="adidas"
@@ -29,64 +84,90 @@ function FilterProducts() {
           <label htmlFor="adidas">Adidas</label>
         </div>
         <div className="filter-item">
-          <input onChange={valueInput} type="checkbox" value="calenciaga" />
+          <input onChange={valueInputMark} type="checkbox" value="calenciaga" />
           <label>Calenciaga</label>
         </div>
         <div className="filter-item">
-          <input onChange={valueInput} type="checkbox" value="k-swiss" />
+          <input onChange={valueInputMark} type="checkbox" value="k-swiss" />
           <label>K-Swiss</label>
         </div>
         <div className="filter-item">
-          <input onChange={valueInput} type="checkbox" value="nike" />
+          <input onChange={valueInputMark} type="checkbox" value="nike" />
           <label>Nike</label>
         </div>
         <div className="filter-item">
-          <input onChange={valueInput} type="checkbox" value="puma" />
+          <input onChange={valueInputMark} type="checkbox" value="puma" />
           <label>Puma</label>
         </div>
       </div>
       <div className="filter-group">
         <h3>Categoria</h3>
         <div className="filter-item">
-          <input type="checkbox" value="esporte" />
+          <input
+            onChange={valueInputCategory}
+            type="checkbox"
+            value="esporte"
+          />
           <label>Esporte e lazer</label>
         </div>
         <div className="filter-item">
-          <input type="checkbox" value="casual" />
+          <input onChange={valueInputCategory} type="checkbox" value="casual" />
           <label>Casual</label>
         </div>
         <div className="filter-item">
-          <input type="checkbox" value="utilitario" />
+          <input
+            onChange={valueInputCategory}
+            type="checkbox"
+            value="utilitario"
+          />
           <label>Utilitário</label>
         </div>
         <div className="filter-item">
-          <input type="checkbox" value="corrida" />
+          <input
+            onChange={valueInputCategory}
+            type="checkbox"
+            value="corrida"
+          />
           <label>Corrida</label>
         </div>
       </div>
       <div className="filter-group">
         <h3>Gênero</h3>
         <div className="filter-item">
-          <input type="checkbox" value="masculino" />
+          <input
+            onChange={valueInputGender}
+            type="checkbox"
+            value="masculino"
+          />
           <label>Masculino</label>
         </div>
         <div className="filter-item">
-          <input type="checkbox" value="feminino" />
+          <input onChange={valueInputGender} type="checkbox" value="feminino" />
           <label>Feminino</label>
         </div>
         <div className="filter-item">
-          <input type="checkbox" value="unisex" />
+          <input onChange={valueInputGender} type="checkbox" value="unisex" />
           <label>Unisex</label>
         </div>
       </div>
       <div className="filter-group">
         <h3>Estado</h3>
         <div className="filter-item">
-          <input name="estado" type="radio" value="novo" />
+          <input
+            onChange={valueInputState}
+            name="estado"
+            type="radio"
+            value="novo"
+          />
           <label>Novo</label>
         </div>
         <div className="filter-item">
-          <input name="estado" type="radio" value="usado" />
+          <input
+            onChange={valueInputState}
+            name="estado"
+            type="radio"
+            value="usado"
+          />
           <label>Usado</label>
         </div>
       </div>
