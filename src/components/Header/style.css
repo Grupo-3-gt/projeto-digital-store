@@ -124,8 +124,13 @@ header {
 
 @media (min-width: 631px) {
   header {
-    height: 192px;
+    padding: 30px 0;
+    height: auto;
     position: static;
+  }
+
+  .div-header {
+    height: 100%;
   }
 
   .menu-button {
@@ -137,7 +142,7 @@ header {
   }
 
   .header-container {
-    height: 120px;
+    gap: 15px;
   }
 
   .div-search {
@@ -151,5 +156,6 @@ header {
   .navbar {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
   }
 }
