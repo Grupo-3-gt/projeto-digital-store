@@ -1,13 +1,14 @@
 import "./style.css";
 import { Link } from "react-router-dom";
 import arrowRight from "../../assets/img/svg/Line.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { ProductContext } from "../../contexts/ProductsContext";
 
 function Card() {
   const location = useLocation();
   const { listProducts, filterProductsArr } = useContext(ProductContext);
+   const navigate = useNavigate()
 
   const filteredProduct =
     filterProductsArr.length !== 0
@@ -15,8 +16,9 @@ function Card() {
           filterProductsArr.includes(product.marca.toLowerCase())
         )
       : listProducts;
-
-  console.log(filteredProduct);
+      function clickCard(id){
+        navigate(`/products/${id}`)
+      }
 
   // const filteredProductData =
   //   location.pathname === "/" ? listProducts.slice(0, 8) : listProducts;
@@ -35,7 +37,7 @@ function Card() {
       )}
       <ul className="card-list">
         {filteredProduct.map((product) => (
-          <li key={product.id} className="card-box">
+          <li onClick={()=> clickCard(product.id)} key={product.id} className="card-box">
             <div className="image-box">
               <span className="discount">30% OFF</span>
               <img

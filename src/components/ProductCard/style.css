@@ -99,6 +99,7 @@
 .tenis-name {
   color: var(--dark-gray-2);
   font-weight: 400;
+  font-size: 16px;
 }
 
 .tenis-p {
@@ -112,6 +113,9 @@
 
   .image-box {
     height: 23vw;
+  }
+  .tenis-name{
+    font-size: 14px;
   }
 }
 
