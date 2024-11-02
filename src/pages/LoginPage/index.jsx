@@ -9,7 +9,7 @@ function LoginPage() {
       <main className="main-loginpage">
         <LoginForm/>
       </main>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }
