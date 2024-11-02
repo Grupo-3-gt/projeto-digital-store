@@ -27,10 +27,7 @@ function Header() {
           <button
             onClick={openMenu}
             className={
-              page == "/login" ||
-              page == "/login/" ||
-              page == "/register" ||
-              page == "/register/"
+              page.includes("login") || page.includes("register")
                 ? "display-none"
                 : "menu-button"
             }
@@ -42,10 +39,7 @@ function Header() {
           </h1>
           <div
             className={
-              page == "/login" ||
-              page == "/login/" ||
-              page == "/register" ||
-              page == "/register/"
+              page.includes("login") || page.includes("register")
                 ? "display-none"
                 : "div-search"
             }
@@ -57,10 +51,7 @@ function Header() {
           </div>
           <div
             className={
-              page == "/login" ||
-              page == "/login/" ||
-              page == "/register" ||
-              page == "/register/"
+              page.includes("login") || page.includes("register")
                 ? "display-none"
                 : "div-buttons"
             }
@@ -70,10 +61,7 @@ function Header() {
           </div>
           <button
             className={
-              page == "/login" ||
-              page == "/login/" ||
-              page == "/register" ||
-              page == "/register/"
+              page.includes("login") || page.includes("register")
                 ? "display-none"
                 : "button-cart"
             }
@@ -83,10 +71,7 @@ function Header() {
         </div>
         <nav
           className={
-            page == "/login" ||
-            page == "/login/" ||
-            page == "/register" ||
-            page == "/register/"
+            page.includes("login") || page.includes("register")
               ? "display-none"
               : "navbar"
           }
@@ -96,7 +81,7 @@ function Header() {
           </Link>
           <Link
             className={
-              page == "/products/" || page == "/products" ? "page-active" : ""
+              page.includes("products") ? "page-active" : ""
             }
             to="/products"
           >
