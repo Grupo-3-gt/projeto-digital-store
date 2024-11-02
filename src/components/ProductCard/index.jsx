@@ -7,16 +7,22 @@ import { ProductContext } from "../../contexts/ProductsContext";
 
 function Card() {
   const location = useLocation();
-  const { listProducts, filterProductsArr } = useContext(ProductContext);
+  const { listProducts, filterProductsObj } = useContext(ProductContext);
 
-  const filteredProduct =
-    filterProductsArr.length !== 0
-      ? listProducts.filter((product) =>
-          filterProductsArr.includes(product.marca.toLowerCase())
-        )
-      : listProducts;
+  const filteredProduct = listProducts.filter((product) => {
+    return (
+      (filterProductsObj.category.length === 0 ||
+        filterProductsObj.category.includes(product.modelo.toLowerCase())) &&
+      (filterProductsObj.mark.length === 0 ||
+        filterProductsObj.mark.includes(product.marca.toLowerCase()))
+    );
+  });
 
-  console.log(filteredProduct);
+  // filterProductsArr.length !== 0
+  //   ? listProducts.filter((product) =>
+  //       filterProductsArr.includes(product.marca.toLowerCase())
+  //     )
+  //   :
 
   // const filteredProductData =
   //   location.pathname === "/" ? listProducts.slice(0, 8) : listProducts;

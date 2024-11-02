@@ -2,9 +2,11 @@ import Header from "../../components/Header";
 import Card from "../../components/ProductCard";
 import Footer from "../../components/Footer";
 import FilterProducts from "../../components/FilterProducts";
-import "./style.css"
+import "./style.css";
 
 function ProductsListPage() {
+  
+
   return (
     <>
       <Header />

@@ -2,6 +2,7 @@
     background-color: var(--white);
     width: 308px;
     padding: 30px;
+    max-height: 680px;
 }
 
 .filter-container h2 {
@@ -26,6 +27,8 @@
 
 .filter-item input {
     cursor: pointer;
+    accent-color: var(--primary);
+    width: 15px;
 }
 
 .filter-item label {
