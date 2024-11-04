@@ -16,7 +16,7 @@ function ProductsListPage() {
       <main>
         <div className="main-box">
           <FilterProducts />
-          <Card />
+          <Card/>
         </div>
       </main>
       <Footer />

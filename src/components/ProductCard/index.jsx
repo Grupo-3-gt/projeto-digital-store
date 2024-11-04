@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { ProductContext } from "../../contexts/ProductsContext";
 
-function Card() {
+function Card({itemNum}) {
   const location = useLocation();
 
   const { listProducts, filterProductsObj } = useContext(ProductContext);
@@ -15,7 +15,8 @@ function Card() {
     navigate(`/products/${id}`);
   }
 
-  const filteredProduct = listProducts.filter((product) => {
+  const productsByPage = listProducts.slice(0, itemNum) || listProducts
+  const filteredProduct = productsByPage.filter((product) => {
     return (
       (filterProductsObj.category.length === 0 ||
         filterProductsObj.category.includes(product.modelo.toLowerCase())) &&

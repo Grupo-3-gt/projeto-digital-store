@@ -19,7 +19,7 @@ function HomePage() {
       <main>
         <CarouselComponent />
         <Collection />
-        <Card />
+        <Card itemNum={8}/>
         <Offer />
       </main>
       <Footer />
