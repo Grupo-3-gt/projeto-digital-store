@@ -124,7 +124,7 @@ header {
 
 @media (min-width: 631px) {
   header {
-    padding: 30px 0;
+    padding: 30px 10px;
     height: auto;
     position: static;
   }

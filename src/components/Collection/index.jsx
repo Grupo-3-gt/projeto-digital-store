@@ -2,11 +2,10 @@ import collectionImg1 from "../../assets/img/png-jpeg/collection-1.png";
 import collectionImg2 from "../../assets/img/png-jpeg/collection-2.png";
 import collectionImg3 from "../../assets/img/png-jpeg/collection-3.png";
 import "./style.css";
-import icon1 from "../../assets/img/png-jpeg/tshirt-collection.png";
-import icon2 from "../../assets/img/png-jpeg/trousers-collection.png";
-import icon3 from "../../assets/img/png-jpeg/cap-collection.png";
-import icon4 from "../../assets/img/png-jpeg/headphones-collection.png";
-import icon5 from "../../assets/img/png-jpeg/sneakers-collection.png";
+import ShirtIcon from "../SvgIcons/shirtIcon";
+import PantsIcon from "../SvgIcons/pantsIcon";
+import HeadphonesIcon from "../SvgIcons/headphonesIcon";
+import TennisIcon from "../SvgIcons/tennisIcon";
 
 function Collection() {
   return (
@@ -34,19 +33,19 @@ function Collection() {
         <h3 className="collection-h3-text">Coleções em Destaque</h3>
         <div className="icon-options">
           <div className="circle-icon">
-            <img className="garments" src={icon1} />
+            <ShirtIcon />
           </div>
           <div className="circle-icon">
-            <img className="garments" src={icon2} />
+            <PantsIcon />
           </div>
           <div className="circle-icon">
-            <img className="garments" src={icon3} />
+            <PantsIcon />
           </div>
           <div className="circle-icon">
-            <img className="garments" src={icon4} />
+            <HeadphonesIcon />
           </div>
           <div className="circle-icon">
-            <img className="garments" src={icon5} />
+            <TennisIcon />
           </div>
         </div>
       </div>

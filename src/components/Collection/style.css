@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 1300px;
+  padding: 0 10px;
   max-width: 100%;
   margin-top: 30px;
 }
@@ -16,21 +18,34 @@
 .collection-card div {
   display: flex;
   position: relative;
+  flex: 1 1 30%;
+  min-width: 250px;
+  max-width: 45%;
+}
+
+.collection-card div img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .cardbutton {
   color: var(--primary);
   background-color: var(--white);
-  width: 153px;
+  width: 35%;
   height: 48px;
   font-size: 16px;
-  font: Text Small Bold;
   font-weight: bolder;
   border: none;
   border-radius: 10px;
   position: absolute;
-  top: 65%;
-  right: 225px;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 80%;
+    transition: 0.3s;
+  }
 }
 
 .collection-card div p {
@@ -48,27 +63,29 @@
   left: 7%;
 }
 
-.garments {
-  width: 64px;
-  height: 64px;
-}
-
-.icons {
-    display: flex;
-    flex-direction: column;
-
+.svg-icon path {
+  fill: var(--dark-gray-2);
+  
 }
 
 .circle-icon {
-  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100px;
-  top: 1380px;
-  left: 364px;
   padding: 20px;
   border-radius: 150px;
   box-shadow: 0px 4px 25px #0000000d;
   background-color: #ffff;
   width: 94px;
+
+  &:hover {
+    cursor: pointer;
+    .svg-icon path {
+      fill: var(--primary);
+      transition: 0.3s;
+    }
+  }
 }
 
 .collection-h3-text {
@@ -95,17 +112,9 @@
   margin-top: 20px;
 }
 
-.icons-name {
-  width: 94px;
-  height: 22px;
-  top: 1496px;
-  left: 825px;
-  gap: 0px;
-  opacity: 0px;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 22px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+@media (max-width: 550px) {
+  .collection-card div {
+    max-width: none;
+    height: 200px;
+  }
 }
