@@ -5,17 +5,17 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { ProductContext } from "../../contexts/ProductsContext";
 
-function Card({itemNum}) {
+function Card({ itemNum }) {
   const location = useLocation();
 
   const { listProducts, filterProductsObj } = useContext(ProductContext);
   const navigate = useNavigate();
-  
+
   function clickCard(id) {
     navigate(`/products/${id}`);
   }
 
-  const productsByPage = listProducts.slice(0, itemNum) || listProducts
+  const productsByPage = listProducts.slice(0, itemNum) || listProducts;
   const filteredProduct = productsByPage.filter((product) => {
     return (
       (filterProductsObj.category.length === 0 ||
@@ -36,7 +36,8 @@ function Card({itemNum}) {
 
   return (
     <section className="container-cards">
-      {location.pathname == "/" ? (
+      {location.pathname !== "/products" &&
+      location.pathname !== "/products/" ? (
         <div className="trending-products">
           <h3 className="text-trendin-gproducts">Produtos em alta</h3>
           <Link className="text-see-all" to="/products">
