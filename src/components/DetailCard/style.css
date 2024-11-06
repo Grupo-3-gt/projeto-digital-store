@@ -1,0 +1,32 @@
+.detail-container {
+    display: flex;
+    width: 1300px;
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+.avaliation-box {
+    display: flex;
+    gap: 15px;
+}
+
+.img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-color: #E2E3FF;
+    flex: 1 1 50%;
+}
+
+.img-box img {
+    width: 76%;
+}
+
+.detail-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    padding: 0 20px;
+}

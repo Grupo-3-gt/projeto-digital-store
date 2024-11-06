@@ -20,8 +20,6 @@ function ProductViewPage() {
 
   const product = listProducts.filter((item) => item.id == id);
 
-  console.log(location.pathname)
-
   if (product.length == 0 && location.pathname !== "/products/cart" && location.pathname !== "/products/cart/") {
     navigate("/");
   }
@@ -32,7 +30,7 @@ function ProductViewPage() {
     <>
       <Header />
       <main>
-        <div className="main-box">
+        <div className="main-box-detail">
           <DetailCard product={productData} />
           <Card itemNum={4}/>
         </div>
