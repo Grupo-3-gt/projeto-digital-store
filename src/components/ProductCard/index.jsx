@@ -12,6 +12,10 @@ function Card({ itemNum }) {
   const navigate = useNavigate();
 
   function clickCard(id) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     navigate(`/products/${id}`);
   }
 
