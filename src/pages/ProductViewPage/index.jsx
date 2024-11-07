@@ -12,7 +12,7 @@ function ProductViewPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const location = useLocation();
   const { listProducts } = useContext(ProductContext);
   const navigate = useNavigate();
@@ -20,24 +20,28 @@ function ProductViewPage() {
 
   const product = listProducts.filter((item) => item.id == id);
 
-  if (product.length == 0 && location.pathname !== "/products/cart" && location.pathname !== "/products/cart/") {
+  const productData = product[0] || {};
+
+  if (
+    product.length == 0 &&
+    location.pathname !== "/products/cart" &&
+    location.pathname !== "/products/cart/"
+  ) {
     navigate("/");
+  } else {
+    return (
+      <>
+        <Header />
+        <main>
+          <div className="main-box-detail">
+            <DetailCard product={productData} />
+            <Card itemNum={4} />
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
   }
-
-  const productData = product[0] || {}
-
-  return (
-    <>
-      <Header />
-      <main>
-        <div className="main-box-detail">
-          <DetailCard product={productData} />
-          <Card itemNum={4}/>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
 }
 
 export default ProductViewPage;
