@@ -6,6 +6,14 @@
   padding: 0 10px;
 }
 
+.nav-page {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark-gray-2);
+  margin-top: 30px;
+  padding-left: 10px;
+}
+
 .avaliation-box {
   display: flex;
   gap: 15px;
@@ -133,18 +141,6 @@ h5 {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  &:nth-child(1) {
-    background-color: #6feeff;
-  }
-  &:nth-child(2) {
-    background-color: #ff6969;
-  }
-  &:nth-child(3) {
-    background-color: #5e5e5e;
-  }
-  &:nth-child(4) {
-    background-color: #6d70b7;
-  }
 }
 
 .buy-button {
@@ -171,5 +167,9 @@ h5 {
   .detail-box {
     padding: 0;
     gap: 25px;
+  }
+
+  .nav-page {
+    margin-top: 100px;
   }
 }
