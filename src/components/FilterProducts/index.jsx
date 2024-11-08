@@ -84,8 +84,8 @@ function FilterProducts() {
           <label htmlFor="adidas">Adidas</label>
         </div>
         <div className="filter-item">
-          <input onChange={valueInputMark} type="checkbox" value="calenciaga" />
-          <label>Calenciaga</label>
+          <input onChange={valueInputMark} type="checkbox" value="balenciaga" />
+          <label>Balenciaga</label>
         </div>
         <div className="filter-item">
           <input onChange={valueInputMark} type="checkbox" value="k-swiss" />
@@ -147,7 +147,7 @@ function FilterProducts() {
         </div>
         <div className="filter-item">
           <input onChange={valueInputGender} type="checkbox" value="unisex" />
-          <label>Unisex</label>
+          <label>Unissex</label>
         </div>
       </div>
       <div className="filter-group">

@@ -74,7 +74,7 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  animation: slideIn 0.3s ease;
+  animation: slide 0.3s ease;
 }
 
 .not-found div {
@@ -156,7 +156,7 @@
   }
 }
 
-@keyframes slideIn {
+@keyframes slide {
   0% {
     transform: translateY(100%);
     opacity: 0;

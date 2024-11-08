@@ -112,6 +112,20 @@
   margin-top: 20px;
 }
 
+.icon-options > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-options > div > h4 {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--dark-gray-2);
+}
+
+
 @media (max-width: 550px) {
   .collection-card div {
     max-width: none;

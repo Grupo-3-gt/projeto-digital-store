@@ -19,8 +19,10 @@ function ProductsListPage() {
           <div>
             <OrderProducts />
           </div>
-          <FilterProducts />
-          <Card/>
+          <div className="filter-products">
+            <FilterProducts />
+            <Card />
+          </div>
         </div>
       </main>
       <Footer />
