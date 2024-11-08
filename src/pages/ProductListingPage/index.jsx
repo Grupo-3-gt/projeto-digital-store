@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import FilterProducts from "../../components/FilterProducts";
 import "./style.css";
 import { useEffect } from "react";
+import OrderProducts from "../../components/OrderProducts";
 
 function ProductsListPage() {
   useEffect(() => {
@@ -15,6 +16,9 @@ function ProductsListPage() {
       <Header />
       <main>
         <div className="main-box">
+          <div>
+            <OrderProducts />
+          </div>
           <FilterProducts />
           <Card/>
         </div>

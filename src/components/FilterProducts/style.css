@@ -35,3 +35,9 @@
     cursor: pointer;
     user-select: none;
 }
+
+@media (max-width: 631px) {
+    .filter-container {
+        display: none;
+    }
+}
