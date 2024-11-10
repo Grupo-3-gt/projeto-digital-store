@@ -8,7 +8,6 @@ import Card from "../../components/ProductCard";
 import { useEffect } from "react";
 
 function HomePage() {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,7 +18,7 @@ function HomePage() {
       <main>
         <CarouselComponent />
         <Collection />
-        <Card itemNum={8}/>
+        <Card itemNum={8} />
         <Offer />
       </main>
       <Footer />
