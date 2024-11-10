@@ -32,20 +32,35 @@ function Collection() {
       <div className="icons">
         <h3 className="collection-h3-text">Coleções em Destaque</h3>
         <div className="icon-options">
-          <div className="circle-icon">
-            <ShirtIcon />
+          <div>
+            <div className="circle-icon">
+              <ShirtIcon />
+            </div>
+            <h4>Camisetas</h4>
           </div>
-          <div className="circle-icon">
-            <PantsIcon />
+          <div>
+            <div className="circle-icon">
+              <PantsIcon />
+            </div>
+            <h4>Calças</h4>
           </div>
-          <div className="circle-icon">
-            <PantsIcon />
+          <div>
+            <div className="circle-icon">
+              <PantsIcon />
+            </div>
+            <h4>Bonés</h4>
           </div>
-          <div className="circle-icon">
-            <HeadphonesIcon />
+          <div>
+            <div className="circle-icon">
+              <HeadphonesIcon />
+            </div>
+            <h4>Headphones</h4>
           </div>
-          <div className="circle-icon">
-            <TennisIcon />
+          <div>
+            <div className="circle-icon">
+              <TennisIcon />
+            </div>
+            <h4>Tênis</h4>
           </div>
         </div>
       </div>

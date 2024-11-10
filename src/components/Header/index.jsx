@@ -3,14 +3,26 @@ import logo from "../../assets/img/svg/logo-header.svg";
 import cartIcon from "../../assets/img/svg/mini-cart.svg";
 import menuIcon from "../../assets/img/svg/menu.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ModalMenu from "../Modals/ModalMenu";
+import { ProductContext } from "../../contexts/ProductsContext";
 
 function Header() {
   const [menu, setMenu] = useState(false);
   const location = useLocation();
   const [page, setPage] = useState(location.pathname);
   const navigate = useNavigate();
+  const { cartArr, setCartArr } = useContext(ProductContext);
+
+  useEffect(() => {
+    if (localStorage.getItem("cart") !== "[]") {
+      setCartArr(JSON.parse(localStorage.getItem("cart") || "[]"));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartArr));
+  }, [cartArr]);
 
   useEffect(() => {
     setPage(location.pathname);
@@ -67,6 +79,7 @@ function Header() {
             }
           >
             <img src={cartIcon} alt="" />
+            {cartArr.length !== 0 && <p className="cart-quantity">{cartArr.length}</p>}
           </button>
         </div>
         <nav

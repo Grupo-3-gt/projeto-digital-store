@@ -9,7 +9,8 @@ import listIcon from "../../assets/img/png-jpeg/listIcon.png";
 function Card({ itemNum }) {
   const location = useLocation();
 
-  const { listProducts, filterProductsObj } = useContext(ProductContext);
+  const { listProducts, filterProductsObj, sortOrder } = useContext(ProductContext);
+ 
   const navigate = useNavigate();
 
   function clickCard(id) {
@@ -21,6 +22,7 @@ function Card({ itemNum }) {
   }
 
   const productsByPage = listProducts.slice(0, itemNum) || listProducts;
+
   const filteredProduct = productsByPage.filter((product) => {
     return (
       (filterProductsObj.category.length === 0 ||
@@ -29,6 +31,12 @@ function Card({ itemNum }) {
         filterProductsObj.mark.includes(product.marca.toLowerCase()))
     );
   });
+
+  if (sortOrder === "asc") {
+    filteredProduct.sort((a, b) => a.preco_desconto - b.preco_desconto);
+  } else if (sortOrder === "desc") {
+    filteredProduct.sort((a, b) => b.preco_desconto - a.preco_desconto);
+  }
 
   if (filteredProduct.length !== 0) {
     return (
