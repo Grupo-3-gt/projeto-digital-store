@@ -16,7 +16,6 @@
 .container-cards {
   width: 1300px;
   max-width: 100%;
-  margin-top: 100px;
 }
 
 .card-list {
@@ -34,9 +33,9 @@
 
 .card-box {
   margin-bottom: 20px;
-  flex: 1 1 40%;
+  flex: 1 1 20%;
   max-width: 310px;
-
+  animation: fadeInUp 0.3s ease;
   &:hover {
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
@@ -47,6 +46,7 @@
 .image-box {
   background-color: #ffffff;
   height: 50vw;
+  max-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,6 +67,25 @@
   text-align: center;
   font-weight: 700;
   line-height: 1.2;
+}
+
+.not-found {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  animation: slide 0.3s ease;
+}
+
+.not-found div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.not-found div > img {
+  width: 150px;
 }
 
 @media (max-width: 1115px) {
@@ -107,21 +126,47 @@
   color: var(--light-gray);
 }
 
-@media (min-width: 532px) {
+@media (max-width: 532px) {
   .card-box {
-    flex: 1 1 20%;
+    flex: 1 1 40%;
+  }
+
+  .image {
+    max-width: 200px;
   }
 
   .image-box {
-    height: 23vw;
+    max-height: 300px;
   }
-  .tenis-name{
+  .tenis-name {
     font-size: 14px;
   }
 }
 
-@media (min-width: 631px) {
-  .container-cards {
-      margin-top: 0;
+@media (max-width: 957px) {
+  .image-box {
+    max-height: 200px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

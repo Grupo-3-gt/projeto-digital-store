@@ -4,6 +4,8 @@ export const ProductContext = createContext({});
 
 export const ProductProvider = ({ children }) => {
   const [listProducts, setListProducts] = useState([]);
+  const [sortOrder, setSortOrder] = useState("");
+  const [cartArr, setCartArr] = useState([]);
   const defaultFilterState = {
     category: [],
     gender: [],
@@ -12,10 +14,6 @@ export const ProductProvider = ({ children }) => {
   };
   const [filterProductsObj, setFilterProductsObj] =
     useState(defaultFilterState);
-
-  const resetFilter = () => {
-    setFilterProductsObj(defaultFilterState);
-  };
 
   async function getProducts() {
     try {
@@ -33,13 +31,22 @@ export const ProductProvider = ({ children }) => {
     getProducts();
   }, []);
 
+  const resetFilter = () => {
+    setFilterProductsObj(defaultFilterState);
+  };
+
   return (
     <ProductContext.Provider
       value={{
         listProducts,
         filterProductsObj,
+        getProducts,
         setFilterProductsObj,
         resetFilter,
+        sortOrder,
+        setSortOrder,
+        cartArr,
+        setCartArr,
       }}
     >
       {children}
