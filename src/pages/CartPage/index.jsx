@@ -1,4 +1,7 @@
 import "./style.css"
+import Card from "../../components/ProductCard";
+import Footer from "../../components/Footer/index";
+import Header from "../../components/Header";
 
 function CartPage () {
     return (
