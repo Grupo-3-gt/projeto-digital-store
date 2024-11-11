@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import "./style.css";
 import { ProductContext } from "../../contexts/ProductsContext";
 
-function FilterProducts() {
+function FilterProducts({ openFilter, setOpenFilter }) {
   const { filterProductsObj, setFilterProductsObj, resetFilter } =
     useContext(ProductContext);
 
@@ -70,105 +70,124 @@ function FilterProducts() {
   }, []);
 
   return (
-    <aside className="filter-container">
-      <h2>Filtrar por</h2>
-      <div className="filter-group">
-        <h3>Marca</h3>
-        <div className="filter-item">
-          <input
-            onChange={valueInputMark}
-            id="adidas"
-            type="checkbox"
-            value="adidas"
-          />
-          <label htmlFor="adidas">Adidas</label>
+    <aside
+      className={`filter-container ${openFilter ? "filter-display" : ""}`}
+    >
+      <div className="filter-box">
+        <div className="header-filter">
+          <h2>Filtrar por</h2>
+          <button onClick={() => setOpenFilter(false)}>X</button>
         </div>
-        <div className="filter-item">
-          <input onChange={valueInputMark} type="checkbox" value="calenciaga" />
-          <label>Calenciaga</label>
+        <div className="filter-group">
+          <h3>Marca</h3>
+          <div className="filter-item">
+            <input
+              onChange={valueInputMark}
+              id="adidas"
+              type="checkbox"
+              value="adidas"
+            />
+            <label htmlFor="adidas">Adidas</label>
+          </div>
+          <div className="filter-item">
+            <input
+              onChange={valueInputMark}
+              type="checkbox"
+              value="balenciaga"
+            />
+            <label>Balenciaga</label>
+          </div>
+          <div className="filter-item">
+            <input onChange={valueInputMark} type="checkbox" value="k-swiss" />
+            <label>K-Swiss</label>
+          </div>
+          <div className="filter-item">
+            <input onChange={valueInputMark} type="checkbox" value="nike" />
+            <label>Nike</label>
+          </div>
+          <div className="filter-item">
+            <input onChange={valueInputMark} type="checkbox" value="puma" />
+            <label>Puma</label>
+          </div>
         </div>
-        <div className="filter-item">
-          <input onChange={valueInputMark} type="checkbox" value="k-swiss" />
-          <label>K-Swiss</label>
+        <div className="filter-group">
+          <h3>Categoria</h3>
+          <div className="filter-item">
+            <input
+              onChange={valueInputCategory}
+              type="checkbox"
+              value="esporte"
+            />
+            <label>Esporte e lazer</label>
+          </div>
+          <div className="filter-item">
+            <input
+              onChange={valueInputCategory}
+              type="checkbox"
+              value="casual"
+            />
+            <label>Casual</label>
+          </div>
+          <div className="filter-item">
+            <input
+              onChange={valueInputCategory}
+              type="checkbox"
+              value="utilitario"
+            />
+            <label>Utilitário</label>
+          </div>
+          <div className="filter-item">
+            <input
+              onChange={valueInputCategory}
+              type="checkbox"
+              value="corrida"
+            />
+            <label>Corrida</label>
+          </div>
         </div>
-        <div className="filter-item">
-          <input onChange={valueInputMark} type="checkbox" value="nike" />
-          <label>Nike</label>
+        <div className="filter-group">
+          <h3>Gênero</h3>
+          <div className="filter-item">
+            <input
+              onChange={valueInputGender}
+              type="checkbox"
+              value="masculino"
+            />
+            <label>Masculino</label>
+          </div>
+          <div className="filter-item">
+            <input
+              onChange={valueInputGender}
+              type="checkbox"
+              value="feminino"
+            />
+            <label>Feminino</label>
+          </div>
+          <div className="filter-item">
+            <input onChange={valueInputGender} type="checkbox" value="unisex" />
+            <label>Unissex</label>
+          </div>
         </div>
-        <div className="filter-item">
-          <input onChange={valueInputMark} type="checkbox" value="puma" />
-          <label>Puma</label>
-        </div>
-      </div>
-      <div className="filter-group">
-        <h3>Categoria</h3>
-        <div className="filter-item">
-          <input
-            onChange={valueInputCategory}
-            type="checkbox"
-            value="esporte"
-          />
-          <label>Esporte e lazer</label>
-        </div>
-        <div className="filter-item">
-          <input onChange={valueInputCategory} type="checkbox" value="casual" />
-          <label>Casual</label>
-        </div>
-        <div className="filter-item">
-          <input
-            onChange={valueInputCategory}
-            type="checkbox"
-            value="utilitario"
-          />
-          <label>Utilitário</label>
-        </div>
-        <div className="filter-item">
-          <input
-            onChange={valueInputCategory}
-            type="checkbox"
-            value="corrida"
-          />
-          <label>Corrida</label>
-        </div>
-      </div>
-      <div className="filter-group">
-        <h3>Gênero</h3>
-        <div className="filter-item">
-          <input
-            onChange={valueInputGender}
-            type="checkbox"
-            value="masculino"
-          />
-          <label>Masculino</label>
-        </div>
-        <div className="filter-item">
-          <input onChange={valueInputGender} type="checkbox" value="feminino" />
-          <label>Feminino</label>
-        </div>
-        <div className="filter-item">
-          <input onChange={valueInputGender} type="checkbox" value="unisex" />
-          <label>Unisex</label>
-        </div>
-      </div>
-      <div className="filter-group">
-        <h3>Estado</h3>
-        <div className="filter-item">
-          <input
-            onChange={valueInputState}
-            name="estado"
-            type="radio"
-            value="novo"
-          />
-          <label>Novo</label>
-        </div>
-        <div className="filter-item">
-          <input
-            onChange={valueInputState}
-            name="estado"
-            type="radio"
-            value="usado"
-          />
-          <label>Usado</label>
+        <div className="filter-group">
+          <h3>Estado</h3>
+          <div className="filter-item">
+            <input
+              onChange={valueInputState}
+              name="estado"
+              type="radio"
+              value="novo"
+            />
+            <label>Novo</label>
+          </div>
+          <div className="filter-item">
+            <input
+              onChange={valueInputState}
+              name="estado"
+              type="radio"
+              value="usado"
+            />
+            <label>Usado</label>
+          </div>
         </div>
       </div>
     </aside>

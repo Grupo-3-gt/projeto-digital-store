@@ -1,15 +1,81 @@
 import "./style.css";
 import star from "../../assets/img/png-jpeg/Stars.png";
 import avaliation from "../../assets/img/png-jpeg/avaliation.png";
+import { Carousel } from "react-bootstrap";
+import { useContext, useEffect, useState } from "react";
+import { ProductContext } from "../../contexts/ProductsContext";
 
 function DetailCard({ product }) {
-  console.log(product);
+  const { cartArr, setCartArr } = useContext(ProductContext);
+
+  useEffect(() => {
+    if (localStorage.getItem("cart") !== "[]") {
+      setCartArr(JSON.parse(localStorage.getItem("cart") || "[]"));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartArr));
+  }, [cartArr]);
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setActiveIndex(selectedIndex);
+  };
+
   return (
     <>
-      <p className="nav-page">Home  /  Produtos  /  Tenis  /  {product.marca} / {product.nome}</p>
+      <p className="nav-page">
+        Home / Produtos / Tenis / {product.marca} / {product.nome}
+      </p>
       <div className="detail-container">
-        <div className="img-box">
-          <img src={product.imagem_url} alt="" />
+        <div className="slides-container">
+          <Carousel
+            activeIndex={activeIndex}
+            onSelect={handleSelect}
+            nextLabel={false}
+            prevLabel={false}
+            indicators={false}
+            className="carousel-div"
+          >
+            {product.backgrounds.map((item, i) => (
+              <Carousel.Item key={i}>
+                <div>
+                  <div style={{ backgroundColor: item }} className="img-box">
+                    <img src={product.imagem_url} alt="" />
+                  </div>
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+          <div className="custom-indicators">
+            {product.backgrounds.map((item, i) => (
+              <div
+                key={i}
+                className={`indicator ${i === activeIndex ? "active" : ""}`}
+                onClick={() => handleSelect(i)}
+              >
+                <div
+                  className="preview"
+                  style={{
+                    backgroundColor: item,
+                    border: i === activeIndex ? "2px solid #C92071" : "none",
+                  }}
+                >
+                  <img
+                    src={product.imagem_url}
+                    alt={`Preview ${i}`}
+                    style={{
+                      maxWidth: "100%",
+                      maxHeight: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="detail-box">
           <h3>{product.nome}</h3>
@@ -54,7 +120,12 @@ function DetailCard({ product }) {
               ))}
             </div>
           </div>
-          <button className="buy-button">COMPRAR</button>
+          <button
+            onClick={() => setCartArr([...cartArr, product])}
+            className="buy-button"
+          >
+            COMPRAR
+          </button>
         </div>
       </div>
     </>
