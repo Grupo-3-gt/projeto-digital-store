@@ -1,36 +1,66 @@
-.compra-confirmada {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+.confirm-purchease  {
+  width: 838px;
+  height: 1,000px;
+  background-color: white;
+  max-width: 600px;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.sucessfig {
+  width: 65px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 200px;
   
-  h2 {
-    color: #4CAF50;
-    text-align: center;
-  }
+ 
   
-  .informacoes, .resumo-compra {
-    margin-top: 20px;
-  }
+
+}
+
+.confirm-text{
+  color: var(--dark-gray);
+  text-align: center;
+  margin-bottom: 20px;
+  width: 450px;
+  height: 62px;
+  font-family: Inter;
+  font-size: 28px;
+
+
+
+    
+}
+
+
+.personal-info{
+
+
+}
+
+.delivery-info{
+
+}
+
+.payment-info{
+
+}
+
+.purchease-info{
+
+}
   
-  h3 {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  p {
-    margin: 5px 0;
-  }
-  
-  button {
+ 
+.sucess-button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: var(--warning);
     color: white;
     border: none;
     border-radius: 5px;
@@ -39,6 +69,6 @@
     margin-top: 20px;
   }
   
-  button:hover {
-    background-color: #45a049;
+  sucess-button:hover {
+    background-color: var(--warning);
   }
