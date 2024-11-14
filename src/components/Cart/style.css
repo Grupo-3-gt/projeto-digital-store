@@ -25,12 +25,25 @@
     max-width: 100%;
   }
   
-  .form-cart {
+  .forms-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
     width: 830px;
     height: 89px;
-    justify-content: space-between;
+    gap: 10px;
+    border: solid red 1px;
+    background-color: aqua;
+    
   }
-  
+  .forms-cart > button {
+    width: 114px;
+    height: 60px;
+    top: 29px;
+    left: 280px;
+  }
+
   .resume-cart {
     display: flex;
     flex-direction: column;
@@ -78,15 +91,48 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    gap: 100px;
   }
 
-  .form-cart{
+  .forms-cart{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 850px;
+    height: 90px;
+    border: solid blue 1px;
   }
-  .form-cart-2{
+
+  .voucher-form{
+    width: 400px;
+    height: 90px;
+    border: solid green 1px;
+    
+  }
+
+  .freight-form{
     display: flex;
     flex-direction: column;
-    
+    width: 400px;
+    height: 90px;
+    border: solid yellow 1px;
+
+  }
+
+  .voucher-form > input, .freight-form > input{
+    width: 250px;
+    height: 50px;
+    border-radius: 8px;
+
+  }
+
+  .voucher-form > .btn-voucher {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .freight-form > .btn-freight{
+    width: 50px;
+    height: 50px;
+
   }
