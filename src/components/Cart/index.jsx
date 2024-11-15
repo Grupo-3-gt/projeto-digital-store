@@ -71,7 +71,10 @@ function Cart() {
           </div>
         </div>
         <hr />
-        <div className="shipping-orders">
+        </>
+        ))
+      }
+      <div className="shipping-orders">
           <div className="discount-voucher">
             <h2>Cupom de desconto</h2>
             <div className="search-cart">
@@ -87,9 +90,6 @@ function Cart() {
             </div>
           </div>
         </div>
-        </>
-        ))
-      }
     </div>
       <div className="resume-cart">
         <h2>RESUMO</h2>
