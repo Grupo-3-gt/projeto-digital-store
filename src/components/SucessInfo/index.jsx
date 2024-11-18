@@ -2,9 +2,11 @@ import  TenisMiniIcon from "../../assets/img/png-jpeg/tenissucessicon.png"
 import  SucessFig from "../../assets/img/png-jpeg/SucessFig.png";
 import React from 'react';
 import './style.css';
+import { useNavigate } from "react-router-dom";
+
 
 function SucessInfo() {
-  // Mock dos dados
+  const navigate = useNavigate()// Mock dos dados
   const dadosCompra = {
     nome: 'Francisco Antonio Pereira',
     cpf: '123.485.913-35',
@@ -60,16 +62,22 @@ function SucessInfo() {
       <hr />
       <div className="purchease-info">
         <h3>Resumo da Compra</h3>
-        <img
-       src={TenisMiniIcon}
-       className="tenisminiicon"
-        />
-        <p>{dadosCompra.produto.nome}</p>
-        <p><strong>Total:</strong> R$ {dadosCompra.produto.preco.toFixed(2)}</p>
+        <div> 
+          <img
+         src={TenisMiniIcon}
+         className="tenisminiicon"
+          />
+         <p>{dadosCompra.produto.nome}</p>
+        </div>
+        <div className="total">
+         <p><strong>Total:</strong></p>
+         <p>R$ {dadosCompra.produto.preco.toFixed(2)}</p>
+        </div>
       </div>
       
+    
       
-      <button className="sucess-button"  onClick={() => alert('Imprimindo Recibo...')}>Voltar Para Home </button>
+      <button className="sucess-button" onClick={() =>navigate("/")}>Voltar Para Home </button>
     </div>
   );
 }

@@ -1,14 +1,14 @@
 .confirm-purchease  {
-  width: 838px;
+  width: 908px;
   height: 1,000px;
   background-color: white;
-  max-width: 600px;
   padding: 60px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
   margin-top: 40px;
   display: flex;
+  align-self: center;
   flex-direction: column;
   gap: 12px;
 }
@@ -17,9 +17,8 @@
   width: 65px;
   height: 60px;
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  margin-left: 200px;
+  align-self: center;
+ 
   
 }
 
@@ -31,6 +30,8 @@
   height: 62px;
   font-family: Inter;
   font-size: 28px;
+  display: flex;
+  align-self: center;
 }
 
 
@@ -67,12 +68,38 @@
 
 }
 
-.purchease-info{
+.purchease-info {
   font-size: small;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
 }
 
 
+.purchease-info div{
+ display: flex;
+ align-items:  center;
+ font-weight: bolder
 
+}
+
+.total{
+  font-size: large;
+  width: 200%;
+  justify-content: space-between;
+  align-self: center;
+  width: 780px;
+  height: 50px;
+
+  
+
+
+
+
+  
+}
   
  
 .sucess-button {
