@@ -1,0 +1,18 @@
+.select-order {
+  background-color: #f9f8fe;
+  font-size: 14px;
+  border-radius: 4px;
+  height: 60px;
+  padding: 10px 40px 10px 15px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+
+@media (max-width: 630px) {
+  .select-order {
+    width: 100%;
+  }
+}

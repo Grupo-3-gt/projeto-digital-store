@@ -11,8 +11,8 @@ function ModalMenu({ page }) {
             Home
           </Link>
           <Link
-            className={page == "/products" ? "page-active" : ""}
-            to="products"
+            className={page.includes("/products") ? "page-active" : ""}
+            to="/products"
           >
             Produtos
           </Link>

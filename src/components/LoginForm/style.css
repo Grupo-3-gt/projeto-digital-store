@@ -89,6 +89,7 @@
   size: 16px;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .login-icons {

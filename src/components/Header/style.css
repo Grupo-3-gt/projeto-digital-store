@@ -85,9 +85,27 @@ header {
 }
 
 .button-cart {
+  position: relative;
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--error);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  top: -12px;
+  left: 10px;
 }
 
 .navbar {
@@ -124,8 +142,13 @@ header {
 
 @media (min-width: 631px) {
   header {
-    height: 192px;
+    padding: 30px 10px;
+    height: auto;
     position: static;
+  }
+
+  .div-header {
+    height: 100%;
   }
 
   .menu-button {
@@ -137,7 +160,7 @@ header {
   }
 
   .header-container {
-    height: 120px;
+    gap: 15px;
   }
 
   .div-search {
@@ -151,5 +174,6 @@ header {
   .navbar {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
   }
 }

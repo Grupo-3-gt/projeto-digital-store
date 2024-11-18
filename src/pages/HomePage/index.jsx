@@ -1,20 +1,30 @@
 import Header from "../../components/Header/index";
 import Offer from "../../components/SpecialOffer";
-import Card from "../../Components/ProductCard/index";
 import Footer from "../../components/Footer/index";
 import "./style.css";
 import CarouselComponent from "../../components/Carousel";
 import Collection from "../../components/Collection";
+import Card from "../../components/ProductCard";
+import { useContext, useEffect } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 function HomePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const { user } = useContext(UserContext);
+
+  console.log(user);
+
   return (
     <div>
       <Header />
       <main>
         <CarouselComponent />
         <Collection />
-        <Card />
-        <Offer/>
+        <Card itemNum={8} />
+        <Offer />
       </main>
       <Footer />
     </div>
