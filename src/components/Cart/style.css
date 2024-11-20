@@ -1,300 +1,365 @@
-.cart-container {
-    background-color: var(--white);
-    max-width: 55.625rem;
-    height: 22rem;
-    border-radius: 0.5rem;
-    padding: 0 2rem 0 2rem;
-    border: 1px solid transparent;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    gap: 50px;
+.container-cart-resume {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  gap: 20px;
 }
 
-.box-resume{
+.container-cart {
+  background-color: var(--white);
+  max-width: 55.625rem;
+  height: min-content;
+  border-radius: 0.5rem;
+  padding: 0 2rem 0 2rem;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.box-resume {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: solid black 1px;
+  height: min-content;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-
 .box-cart {
-    display: flex;
-    height: 2rem;
-    margin-top: 1.5rem;
+  display: flex;
+  height: 2rem;
+  margin-top: 1.5rem;
 }
 
 .box-cart h3 {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_bold);
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.75px;
-    color: var(--black);
-    margin: auto auto auto 0;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_bold);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.75px;
+  color: var(--black);
+  margin: auto auto auto 0;
 }
 
 .box-cart h4 {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_normal);
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.75px;
-    color: var(--black);
-    margin: auto 2rem auto 0.5rem;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_normal);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.75px;
+  color: var(--black);
+  margin: auto 2rem auto 0.5rem;
 }
 
 .description-orders {
-    display: flex;
+  display: flex;
 }
 
 .background-img-cart {
-    background-color: #E2E3FF;
-    width: 8rem;
-    height: 6.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-    margin-right: 1rem;
+  background-color: #e2e3ff;
+  width: 8rem;
+  height: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
 }
 
 .description-orders img {
-    width: 5.62rem;
-    height: auto;
+  width: 5.62rem;
+  height: auto;
 }
 
 .info-cart-oders h4 {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_normal);
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    letter-spacing: 0.25px;
-    color: var(--light-gray);
-    margin: auto 2rem 0.5rem 0.2rem;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_normal);
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.25px;
+  color: var(--light-gray);
+  margin: auto 2rem 0.5rem 0.2rem;
 }
 
 .info-cart-oders h6 {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_normal);
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    letter-spacing: 0.25px;
-    color: var(--light-gray);
-    margin: auto 2rem 0 0.2rem;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_normal);
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.25px;
+  color: var(--light-gray);
+  margin: auto 2rem 0 0.2rem;
 }
 
 .info-cart-oders span {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_normal);
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    letter-spacing: 0.25px;
-    color: var(--black);
-    margin-left: 0.2rem;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_normal);
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.25px;
+  color: var(--black);
+  margin-left: 0.2rem;
 }
 
 .info-cart-oders h5 {
-    width: 13.6875rem;
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_bold);
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    letter-spacing: 0.75px;
-    color: var(--black);
-    margin: auto 2rem 0.5rem 0.2rem;
+  width: 13.6875rem;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_bold);
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.75px;
+  color: var(--black);
+  margin: auto 2rem 0.5rem 0.2rem;
 }
 
 .quantity-orders {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0 1rem 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 1rem 0 auto;
 }
 
 .quantity-orders a {
-    color: var(--black);
+  color: var(--black);
 }
 
 .order-counter {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .order-counter h6 {
-    align-self: center;
-    margin: auto;
+  align-self: center;
+  margin: auto;
 }
 
 .order-counter button {
-    background-color: var(--white);
-    border-radius: 0.5rem;
-    border: 1px var(--light-gray-2) solid;
-    width: 2.1875rem;
-    height: 2.1875rem;
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_bold);
-    font-size: 1.2rem;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  border: 1px var(--light-gray-2) solid;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_bold);
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bnt-remove{
+  background-color: var(--white);
+  border: none;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.bnt-remove:hover{
+  background-color: var(--white);
+  border: none;
+  color: var(--error);
+  border-bottom: 1px solid var(--error);
 }
 
 .unit-orders {
-    width: 5.375rem;
-    margin: 0 0.5rem 0 0.5rem;
+  width: 5.375rem;
+  margin: 0 0.5rem 0 0.5rem;
 }
 
 .unit-orders h2 {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_bold);
-    font-size: 1rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.75px;
-    color: var(--black);
-    text-align: center;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_bold);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.75px;
+  color: var(--black);
+  text-align: center;
 }
 
 .unit-orders h3 {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_normal);
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.75px;
-    color: var(--light-gray-2);
-    text-align: center;
-    text-decoration: line-through;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_normal);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.75px;
+  color: var(--light-gray-2);
+  text-align: center;
+  text-decoration: line-through;
 }
 
 .total-orders {
-    width: 5.375rem;
-    margin: 0 0.6rem 0 0.5rem;
+  width: 5.375rem;
+  margin: 0 0.6rem 0 0.5rem;
 }
 
 .total-orders h2 {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_bold);
-    font-size: 1rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.75px;
-    color: var(--black);
-    text-align: center;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_bold);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.75px;
+  color: var(--black);
+  text-align: center;
 }
 
 .total-orders h3 {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_normal);
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.75px;
-    color: var(--light-gray-2);
-    text-align: center;
-    text-decoration: line-through;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_normal);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.75px;
+  color: var(--light-gray-2);
+  text-align: center;
+  text-decoration: line-through;
 }
 
 .shipping-orders {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .discount-voucher h2 {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_bold);
-    font-size: 0.75rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.75px;
-    color: var(--black);
-    text-align: flex-start;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_bold);
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.75px;
+  color: var(--black);
+  text-align: flex-start;
 }
 
-.search-cart{
+.search-cart {
   display: flex;
 }
 
 .search-cart input {
-    background-color: var(--light-gray-4);
-    width: 16.875rem;
-    height: 3.75rem;
-    border-radius: 0.5rem;
-    padding-left: 1rem;
-    border: none;
-    outline: none;
+  background-color: var(--light-gray-4);
+  width: 16.875rem;
+  height: 3.75rem;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  border: none;
+  outline: none;
 }
 
 .search-cart input::placeholder {
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_normal);
-    font-size: 1rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.75px;
-    color: var(--dark-gray-3);
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_normal);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.75px;
+  color: var(--dark-gray-3);
 }
 
 .search-cart button {
-    background-color: var(--light-gray-4);
-    color: var(--primary);
-    width: 7.125rem;
-    height: 3.75rem;
-    border-radius: 0.5rem;
-    border: none;
-    outline: none;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    font-family: var(--font_primaria);
-    font-weight: var(--font_weight_bold);
-    font-size: 1rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.75px;
-    transition: 0.3s ease;
+  background-color: var(--light-gray-4);
+  color: var(--primary);
+  width: 7.125rem;
+  height: 3.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-family: var(--font_primaria);
+  font-weight: var(--font_weight_bold);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.75px;
+  transition: 0.3s ease;
 }
 
 .search-cart button:hover {
-    background-color: var(--light-gray-2);
-    color: var(--tertiary);
+  background-color: var(--light-gray-2);
+  color: var(--tertiary);
 }
 
 .resume-cart {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: start;
-  border: solid black 1px;
+  align-items: center;
   background-color: white;
   width: 334px;
   height: 364px;
   top: 272px;
   left: 1005px;
-  padding: 10px;
-  gap: 20px;
+  padding: 15px;
+  gap: 15px;
   border-radius: 4px;
 }
 
+.resume-cart > h2 {
+  align-self: center;
+  width: 274px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px var(--light-gray-2);
+}
+
 .resume-cart > .btn-resume-cart {
-  width: 300px;
-  height: 50px;
+  width: 274px;
+  height: 40px;
   top: 272px;
   left: 1005px;
   padding: 2px;
   gap: 20px;
   border-radius: 4px;
+  font-size: 18px;
+  color: var(--white);
+  background-color: var(--warning);
+  border: none;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.resume-cart > .btn-resume-cart:hover {
+  color: var(--white);
+  background-color: #c48717;
 }
 
 .resume-price {
-  border: solid red 1px;
-  width: 300px;
-  height: 300px;
+  width: 274px;
+  height: auto;
+  gap: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }
 
+.resume-price > p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--light-gray);
+}
+
 .resume-price > p > span {
-  border: solid black 1px;
-  text-align: right;
-  align-items: flex-end;
+  align-self: end;
+  color: var(--dark-gray);
+}
+
+.resume-price > h3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  color: var(--dark-gray);
+}
+
+.resume-price > h3 > span {
+  align-self: self-end;
+  color: var(--error);
+}
+
+.resume-price > .parcela {
+  font-size: 15px;
+  justify-content: end;
 }
