@@ -4,8 +4,10 @@ import avaliation from "../../assets/img/png-jpeg/avaliation.png";
 import { Carousel } from "react-bootstrap";
 import { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../../contexts/ProductsContext";
+import { useNavigate } from "react-router-dom";
 
 function DetailCard({ product }) {
+  const navigate = useNavigate()
   const { cartArr, setCartArr } = useContext(ProductContext);
 
   useEffect(() => {
@@ -121,7 +123,10 @@ function DetailCard({ product }) {
             </div>
           </div>
           <button
-            onClick={() => setCartArr([...cartArr, product])}
+            onClick={() => {
+              setCartArr([...cartArr, product])
+              navigate("/products/cart")
+            }}
             className="buy-button"
           >
             COMPRAR
