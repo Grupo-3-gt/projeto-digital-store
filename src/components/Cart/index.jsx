@@ -119,13 +119,16 @@ function Cart() {
           <h2>RESUMO</h2>
           <div className="resume-price">
             <p>
-              Subtotal: <span>R$219,00</span>
+              Subtotal: <span> {(total * count).toLocaleString("pt-br", {
+                  style: "currency",
+                  currency: "BRL",
+                })}</span>
             </p>
             <p>
               Frete: <span>R$0,00</span>
             </p>
             <p>
-              Desconto: <span>R$30,00</span>
+              Desconto: <span>R$0,00</span>
             </p>
             <h3>
               Total{" "}
