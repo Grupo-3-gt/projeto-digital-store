@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { api } from "../Api/Api";
+import { api, apiCep } from "../Api/Api";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,8 @@ export const UserContext = createContext({});
 export const UserProvider = ({ children }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState("")
+  const [token, setToken] = useState("");
+  const [address, setAdress] = useState({});
 
   useEffect(() => {
     if (token) {
@@ -16,6 +17,20 @@ export const UserProvider = ({ children }) => {
       getUserById(decodedToken.id);
     }
   }, [token]);
+
+  async function getCep(cep) {
+    try {
+      const res = await apiCep.get(`/ws/${cep}/json/`);
+      if(res.data.erro){
+        setAdress({})
+      } else {
+        setAdress(res.data)
+      }
+    } catch (error) {
+      setAdress({});
+      console.log(error);
+    }
+  }
 
   async function getUserById(id) {
     try {
@@ -30,7 +45,7 @@ export const UserProvider = ({ children }) => {
     try {
       const res = await api.post("/login", data);
       localStorage.setItem("user_token", res.data.token);
-      setToken(res.data.token)
+      setToken(res.data.token);
       navigate("/");
     } catch (error) {
       console.log(error.response.data.message);
@@ -42,6 +57,8 @@ export const UserProvider = ({ children }) => {
       value={{
         login,
         user,
+        getCep,
+        address,
       }}
     >
       {children}
