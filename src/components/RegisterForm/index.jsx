@@ -21,7 +21,11 @@ function RegisterForm() {
     <>
       <div className="container-form">
         <h1> Criar Conta</h1>
-        <form action="" method="post" className="form-register">
+        <form
+          noValidate
+          onSubmit={handleSubmit(submit)}
+          className="form-register"
+        >
           <div className="box-form">
             <h3>Informações Pessoais</h3>
             <hr />
@@ -33,6 +37,7 @@ function RegisterForm() {
               required
               {...register("first_name")}
             />
+            {errors.first_name && <p>{errors.first_name.message}</p>}
             <label htmlFor="name">Sobrenome *</label>
             <input
               type="text"
@@ -41,6 +46,7 @@ function RegisterForm() {
               required
               {...register("surname")}
             />
+            {errors.surname && <p>{errors.surname.message}</p>}
             <label htmlFor="cpf">CPF *</label>
             <input
               type="text"
@@ -49,6 +55,7 @@ function RegisterForm() {
               required
               {...register("cpf")}
             />
+            {errors.cpf && <p>{errors.cpf.message}</p>}
             <label htmlFor="email">E-mail *</label>
             <input
               type="text"
@@ -57,6 +64,7 @@ function RegisterForm() {
               required
               {...register("email")}
             />
+            {errors.email && <p>{errors.email.message}</p>}
             <label htmlFor="celular">Celular *</label>
             <input
               type="text"
@@ -65,6 +73,7 @@ function RegisterForm() {
               required
               {...register("phone")}
             />
+            {errors.phone && <p>{errors.phone.message}</p>}
             <label>Senha *</label>
             <input
               type="password"
@@ -72,6 +81,7 @@ function RegisterForm() {
               required
               {...register("password")}
             />
+            {errors.password && <p>{errors.password.message}</p>}
           </div>
           <div className="box-form-two">
             <h3>Informações de Entrega</h3>
@@ -114,7 +124,9 @@ function RegisterForm() {
               interação do cliente.
             </p>
           </div>
-          <button className="btn-form">Criar Conta</button>
+          <button type="submit" className="btn-form">
+            Criar Conta
+          </button>
         </form>
       </div>
     </>
