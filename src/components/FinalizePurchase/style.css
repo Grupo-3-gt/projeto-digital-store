@@ -1,0 +1,93 @@
+.container{
+    display: flex;
+    /* flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 751px;
+    margin: 40px 0px 100px 0;
+    max-width: 100%; */
+
+}
+.form-text{
+    color: #474747;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.container label{
+    color: #474747;
+    width: 115px;
+    height: 24px;
+    top: 92px;
+    left: 30px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+
+}
+.container input{
+    /* width: 690px;
+    height: 60px; */
+    top: 121px;
+    left: 30px;
+    border-radius: 8px;
+    /* opacity: 4%; */
+    border: none;
+    background-color: var(--light-gray-3);
+
+
+}
+.personal-infomation{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+
+}
+.circle{
+    width: 22px;
+    height: 22px;
+    border: 1px ;
+
+}
+.button-payment{
+    width: 690px;
+    height: 50px;
+    border-radius: 8px;
+    background: #F6AA1C;
+    border: none;
+    cursor: pointer;
+    color: #F5F5F5;
+    
+}
+.circle-box{
+    display: flex;
+}
+.input-radio{
+    display: flex;
+    flex-direction: row;
+}
+.button-payment:hover{
+    cursor: pointer;
+    background-color: #C92071;
+    transition: 250ms ease-in;
+}
+.summary button{
+    width: 408px;
+    height: 50px;
+    border-radius: 8px;
+    background: #F6AA1C;
+    border: none;
+    cursor: pointer;
+    color: #F5F5F5;
+}
