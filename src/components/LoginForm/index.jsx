@@ -11,7 +11,7 @@ import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 function LoginForm() {
-  const { login } = useContext(UserContext)
+  const { login } = useContext(UserContext);
   const {
     register,
     handleSubmit,
@@ -21,16 +21,16 @@ function LoginForm() {
     resolver: yupResolver(loginSchema),
   });
 
-  function submit(data){
-    login(data)
+  function submit(data) {
+    login(data);
   }
-  
+
   return (
     <div className="login-container">
       <form className="form-content" onSubmit={handleSubmit(submit)}>
         <h2 className="access-text">Acesse sua conta</h2>
         <p className="register-text">
-          Novo cliente? Então registre-se <Link>aqui.</Link>
+          Novo cliente? Então registre-se <Link to="/register">aqui.</Link>
         </p>
         <div className="input-box">
           <label htmlFor="login">Login *</label>
@@ -40,7 +40,7 @@ function LoginForm() {
             placeholder="Insira seu login ou email"
             {...register("email")}
           />
-           {errors.email && <p>{errors.email.message}</p>}
+          {errors.email && <p className="erro-input">{errors.email.message}</p>}
         </div>
         <div className="input-box">
           <label htmlFor="password">Senha *</label>
@@ -50,7 +50,9 @@ function LoginForm() {
             placeholder="Insira sua senha"
             {...register("password")}
           />
-          {errors.password && <p>{errors.password.message}</p>}
+          {errors.password && (
+            <p className="erro-input">{errors.password.message}</p>
+          )}
         </div>
         <Link className="recover-password">Esqueci minha senha</Link>
         <button type="submit" className="access-button">

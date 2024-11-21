@@ -44,6 +44,7 @@
   cursor: pointer;
   accent-color: var(--primary);
   width: 15px;
+  height: auto;
 }
 
 .filter-item label {

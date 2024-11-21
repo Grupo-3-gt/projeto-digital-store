@@ -6,6 +6,7 @@ import ShirtIcon from "../SvgIcons/shirtIcon";
 import PantsIcon from "../SvgIcons/pantsIcon";
 import HeadphonesIcon from "../SvgIcons/headphonesIcon";
 import TennisIcon from "../SvgIcons/tennisIcon";
+import CapIcon from "../SvgIcons/cap";
 
 function Collection() {
   return (
@@ -46,7 +47,7 @@ function Collection() {
           </div>
           <div>
             <div className="circle-icon">
-              <PantsIcon />
+              <CapIcon />
             </div>
             <h4>Bonés</h4>
           </div>
