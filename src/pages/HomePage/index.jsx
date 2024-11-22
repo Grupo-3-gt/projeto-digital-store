@@ -23,7 +23,7 @@ function HomePage() {
       <main>
         <CarouselComponent />
         <Collection />
-        <Card itemNum={8} />
+        <Card itemNum={8} text="Produtos em alta" />
         <Offer />
       </main>
       <Footer />

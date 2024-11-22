@@ -1,5 +1,6 @@
 import { AxiosError } from "axios";
 import { createContext, useEffect, useState } from "react";
+import { api } from "../Api/Api";
 
 export const ProductContext = createContext({});
 
@@ -18,13 +19,14 @@ export const ProductProvider = ({ children }) => {
 
   async function getProducts() {
     try {
-      const res = await fetch("https://api-store-do1w.onrender.com/shoes");
+      const res = await api.get("/products?limit=-1");
 
-      const data = await res.json();
+      // const data = await res.json();
+      console.log(res.data.data)
 
-      setListProducts(data);
+      setListProducts(res.data.data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 

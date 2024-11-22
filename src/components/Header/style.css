@@ -134,6 +134,22 @@ header {
   display: none;
 }
 
+.div-cart-button {
+  position: relative;
+}
+
+.user-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: default;
+
+  p {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
 @media (min-width: 886px) {
   .div-search input {
     height: 60px;

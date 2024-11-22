@@ -47,7 +47,7 @@ function Collection() {
           </div>
           <div>
             <div className="circle-icon">
-              <CapIcon />
+              <PantsIcon />
             </div>
             <h4>Bonés</h4>
           </div>

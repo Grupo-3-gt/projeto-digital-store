@@ -11,7 +11,7 @@ import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 function LoginForm() {
-  const { login } = useContext(UserContext);
+  const { login, loading } = useContext(UserContext);
   const {
     register,
     handleSubmit,
@@ -21,7 +21,7 @@ function LoginForm() {
     resolver: yupResolver(loginSchema),
   });
 
-  function submit(data) {
+  async function submit(data) {
     login(data);
   }
 
@@ -55,8 +55,8 @@ function LoginForm() {
           )}
         </div>
         <Link className="recover-password">Esqueci minha senha</Link>
-        <button type="submit" className="access-button">
-          Acessar conta
+        <button disabled={loading} type="submit" className="access-button">
+          {loading ? <div className="spinner"></div> : "Acessar conta"}
         </button>
         <div className="login-icons">
           <p>Ou faça login com</p>

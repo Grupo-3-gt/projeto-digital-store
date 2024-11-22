@@ -116,7 +116,7 @@ function FilterProducts({ openFilter, setOpenFilter }) {
             <input
               onChange={valueInputCategory}
               type="checkbox"
-              value="esporte"
+              value="1"
             />
             <label>Esporte e lazer</label>
           </div>
@@ -124,7 +124,7 @@ function FilterProducts({ openFilter, setOpenFilter }) {
             <input
               onChange={valueInputCategory}
               type="checkbox"
-              value="casual"
+              value="2"
             />
             <label>Casual</label>
           </div>
@@ -132,7 +132,7 @@ function FilterProducts({ openFilter, setOpenFilter }) {
             <input
               onChange={valueInputCategory}
               type="checkbox"
-              value="utilitario"
+              value="3"
             />
             <label>Utilitário</label>
           </div>
@@ -140,7 +140,7 @@ function FilterProducts({ openFilter, setOpenFilter }) {
             <input
               onChange={valueInputCategory}
               type="checkbox"
-              value="corrida"
+              value="4"
             />
             <label>Corrida</label>
           </div>
