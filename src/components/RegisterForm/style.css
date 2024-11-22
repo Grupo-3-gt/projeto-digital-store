@@ -1,0 +1,84 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 751px;
+  margin: 40px 0px 100px 0;
+  max-width: 100%;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  gap: 10px;
+}
+
+.box-form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 30px;
+  gap: 15px;
+}
+
+.box-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  height: 60px;
+  border-radius: 8px;
+  background-color: var(--light-gray-3);
+  border: none;
+  padding: 0 10px;
+  outline: none;
+}
+
+.box-form div label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.check-form {
+  display: flex;
+  gap: 10px;
+}
+
+.check-form > input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.check-form > input {
+  width: 22px;
+  height: auto;
+}
+
+.erro-input {
+  color: var(--error);
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.erro-border {
+  border: 1px solid var(--error);
+}
+
+.btn-form {
+  height: 48px;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 630px) {
+  .container-form {
+    margin-top: 100px;
+  }
+}

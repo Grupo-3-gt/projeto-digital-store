@@ -1,0 +1,138 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray-3);
+  width: 100%;
+  z-index: 0;
+}
+
+.carousel-inner {
+  z-index: -1;
+}
+
+.carousel-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  z-index: 0;
+}
+
+.ornament-img {
+  right: 30px;
+  top: 20px;
+  position: absolute;
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1300px;
+  flex-direction: row;
+}
+
+.carousel-content img {
+  width: 60%;
+}
+
+.carousel-content > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 10%;
+  gap: 10px;
+}
+
+.text-primary {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--warning);
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 800;
+}
+
+.text-second {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.button-title-carousel {
+  width: 220px;
+  height: 48px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+}
+
+.carousel-indicators {
+  z-index: 0 !important;
+}
+
+.carousel-indicators button {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: var(--light-gray) !important;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: var(--primary) !important;
+}
+
+@media (max-width: 1012px) {
+  .carousel-container {
+    padding-bottom: 20px;
+  }
+
+  .text-primary {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .text-second {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 631px) {
+  .carousel-container {
+    margin-top: 80px;
+  }
+
+  .carousel-content {
+   flex-direction: column-reverse;
+   gap: 15px;
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .carousel-content img {
+    width: 100%;
+  }
+
+  .ornament-img {
+    right: -77px;
+    top: 10px;
+  }
+
+  .button-title-carousel {
+    margin-bottom: 60px;
+  }
+}

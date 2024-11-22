@@ -1,0 +1,56 @@
+.main-box {
+  display: flex;
+  max-width: 100%;
+  gap: 30px;
+  width: 1300px;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.filter-products {
+  display: flex;
+}
+
+.order-products {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.order-products > div > button {
+  display: none;
+  align-items: center;
+  width: 60px;
+  justify-content: center;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.order-products > div {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 630px) {
+  .main-box {
+    margin-top: 120px;
+  }
+
+  .order-products {
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .order-products > div {
+    width: 100%;
+  }
+
+  .order-products > div > button {
+    display: flex;
+  }
+}

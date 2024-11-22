@@ -1,0 +1,134 @@
+.offer-container {
+  background-color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+  width: 100%;
+}
+
+.offer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  width: 1300px;
+  padding: 60px 0;
+  gap: 30px;
+}
+
+.offer-circle {
+  display: flex;
+  position: relative;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(68, 0, 255, 0.126) -40.67%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 50%;
+  padding-bottom: 30%;
+  flex: 1 1 20%;
+  box-sizing: border-box;
+}
+
+.offer-circle img {
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  transition: transform 0.8s ease;
+}
+
+.offer-circle img:hover {
+  transform: scale(1.05);
+}
+
+.offer-tennis {
+  display: flex;
+}
+
+.offer-informations {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1 1 50%;
+  box-sizing: border-box;
+}
+
+.offer-informations h2 {
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 50px;
+  color: var(--dark-gray-2);
+}
+
+.special-offer {
+  font-size: 14px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.offer-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.offer-button {
+  width: 200px;
+  height: 40px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.offer-button:hover {
+  opacity: 80%;
+}
+
+@media (max-width: 925px) {
+  .offer-informations {
+    gap: 8px;
+  }
+
+  .offer-informations h2 {
+    font-size: 34px;
+    line-height: 35px;
+  }
+
+  .special-offer {
+    font-size: 12px;
+  }
+
+  .offer-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 606px) {
+  .offer-box {
+    padding: 50px 10px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .offer-circle {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  .offer-circle img {
+    left: 0;
+    top: 50px;
+  }
+
+  .special-offer {
+    color: var(--warning);
+  }
+}
