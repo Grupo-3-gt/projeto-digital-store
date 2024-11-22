@@ -1,15 +1,16 @@
 .container{
     display: flex;
     justify-content: center;
-    background-color: red;
 }
 .finalize-purchase{
     color: #1F1F1F;
     font-size: 32px;
     font-weight: 700;
     line-height: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-hr{
+.container hr{
     border: 1px solid #CCCCCC;
     width: 690px;
     margin-bottom: 15px;
@@ -30,12 +31,9 @@ hr{
     color: #474747;
     width: 118px;
     height: 24px;
-    top: 92px;
-    left: 30px;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.75px;
-    text-align: left;
+    letter-spacing: 0.7px;
 }
 .container input{
     top: 121px;
@@ -43,6 +41,13 @@ hr{
     border-radius: 8px;
     border: none;
     background-color: var(--light-gray-3);
+    padding-left: 20px;
+}
+.container input::placeholder{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.7px;
 }
 .personal-infomation{
     background-color: #FFFFFF;
@@ -53,6 +58,7 @@ hr{
     padding: 30px;
     border-radius: 4px;
     margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .personal-infomation input{
     height: 60px;
@@ -64,6 +70,7 @@ hr{
     padding: 30px;
     border-radius: 4px;
     margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .delivery-information input{
     height: 60px;
@@ -75,6 +82,7 @@ hr{
     padding: 30px;
     border-radius: 4px;
     margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .payment-information label{
     width: 189px;
@@ -100,22 +108,21 @@ hr{
     flex-direction: row;
 }
 .circle-box label{
-    width: 124px;
+    width: 125px;
     height: 22px;
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
-    letter-spacing: 0.25px;
-
-}
-.text-method{
-    margin-bottom: 15px;
+    letter-spacing: 0.3px;  
 }
 .circle-box input{
     width: 22px;
     height: 22px;
     border: 1px;
-    margin-right: 10px;
+    margin-right: 10px; 
+}
+.text-method{
+    margin-bottom: 15px;
 }
 .finish-purchase{
     background-color: #FFFFFF;
@@ -125,6 +132,7 @@ hr{
     padding: 30px;
     border-radius: 4px;
     margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .total-flex{
     display: flex;
@@ -157,7 +165,6 @@ hr{
     display: flex;
     align-items: end;
 }
-
 .button-payment{
     width: 690px;
     height: 50px;
@@ -179,21 +186,43 @@ hr{
 .summary{
     background-color: #FFFFFF;
     width: 468px;
-    height: 450px;
+    height: 475px;
     padding: 30px;
     border-radius: 4px;
     margin-left: 20px;
-    margin-top: 28px;
-    
+    margin-top: 76px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .summary hr{
     width: 408px;
+}
+.summary-img{
+    display: flex;
+    justify-content: space-between;
+}
+.card-img{
+    background-color: #E2E3FF;
+    width: 71.18px;
+    height: 58px;
+    border-radius: 2.67px;
+}
+.card-img img{
+    width: 50px;
+    margin-left: 15%;
+}
+.img-description{
+   color:#1F1F1F;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.75px;
+    margin-left: 15px;
 }
 .space-summary{
     display: flex;
     justify-content: space-between;
 }
-.summary span{
+.space-summary span{
     color: #8F8F8F;
     font-size: 14px;
     font-weight: 500;
@@ -213,10 +242,8 @@ hr{
     width: 408px;
     height: 100px;
     padding: 20px;
-    gap: 0px;
     border-radius: 4px;
     border: 1px;
-    opacity: 0px;
     border: 1px solid #F6AA1C26;
     margin-bottom: 10px;
 }

@@ -1,10 +1,9 @@
-
+import Tenis from "../../assets/img/png-jpeg/tenis-finalize-purchase.png"
 import "./style.css"
 
 function FinalizePurchase () {
     return(
         <div className="container">
-            
             <div className="form-finalize">
                 <h2 className="finalize-purchase">Finalizar Compra</h2>
                 <div className="personal-infomation">
@@ -72,6 +71,10 @@ function FinalizePurchase () {
                                     <input name="method" className="circle" type="radio" id="ticket"/>
                                     <label htmlFor="ticket">Boleto Bancário</label>
                                 </div>
+                                <div className="input-radio">
+                                    <input name="method" className="circle" type="radio" id="ticket"/>
+                                    <label htmlFor="ticket">Pix</label>
+                                </div>
                             </div>
                             <div className="form">
                                 <label htmlFor="cardName">Nome do Cartão*</label>
@@ -112,10 +115,12 @@ function FinalizePurchase () {
                 <h3>RESUMO</h3>
                 <hr />
                 <div className="summary-img">
-                    <img src="" alt="" />
-                    <span>Tênis Nike Revolution 6 Next Nature Masculino</span>
-                    <hr />
+                    <div className="card-img">
+                       <img src={Tenis} alt="tenis" /> 
+                    </div>
+                    <span className="img-description">Tênis Nike Revolution 6 Next Nature Masculino</span>
                 </div>
+                <hr />
                 <div className="space-summary">
                     <span>Subtotal:</span>
                     <p>R$ 219,00</p>
