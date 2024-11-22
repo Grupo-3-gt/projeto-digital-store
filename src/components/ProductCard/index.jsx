@@ -41,9 +41,9 @@ function Card({ itemNum, text }) {
   });
 
   if (sortOrder === "asc") {
-    filteredProduct.sort((a, b) => a.preco_desconto - b.preco_desconto);
+    filteredProduct.sort((a, b) => a.price_with_discount - b.price_with_discount);
   } else if (sortOrder === "desc") {
-    filteredProduct.sort((a, b) => b.preco_desconto - a.preco_desconto);
+    filteredProduct.sort((a, b) => b.price_with_discount - a.price_with_discount);
   }
 
   if (filteredProduct.length !== 0) {
@@ -76,11 +76,11 @@ function Card({ itemNum, text }) {
                 />
               </div>
               <div className="card-content">
-                <p className="tenis-p"></p>
+                <p className="tenis-p">{product.mark}</p>
                 <h2 className="tenis-name">{product.name}</h2>
                 <div className="price-section">
-                  <span className="old-price">{product.preco_original}</span>
-                  <span className="new-price">{product.preco_desconto}</span>
+                  <span className="old-price">${product.price}</span>
+                  <span className="new-price">${product.price_with_discount}</span>
                 </div>
               </div>
             </li>

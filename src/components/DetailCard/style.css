@@ -191,6 +191,11 @@ h5 {
   border-radius: 4px;
 }
 
+.size-button button.active-button {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
 @media (max-width: 652px) {
   .detail-container {
     flex-direction: column;

@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { api, apiCep } from "../Api/Api";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const UserContext = createContext({});
 
@@ -47,7 +48,10 @@ export const UserProvider = ({ children }) => {
 
       navigate("/");
     } catch (error) {
-      console.log(error);
+      toast.error(error.response.data.message, {
+        autoClose: 3000, 
+        theme: "dark"
+      });
     } finally {
       setLoading(false);
     }

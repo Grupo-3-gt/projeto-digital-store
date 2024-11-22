@@ -19,18 +19,18 @@ function FloatingCart() {
       <hr />
       {cartArr.map((item) => (
         <div className="cart-box" key={item.id}>
-          <img src={item.imagem_url} alt="" />
+          <img src={item.images[0].path} alt="" />
           <div className="cart-content">
-            <h3>{item.nome}</h3>
+            <h3>{item.name}</h3>
             <div>
               <span>
-                {item.preco_desconto.toLocaleString("pt-br", {
+                {item.price_with_discount.toLocaleString("pt-br", {
                   style: "currency",
                   currency: "BRL",
                 })}
               </span>
               <span>
-                {item.preco_original.toLocaleString("pt-br", {
+                {item.price.toLocaleString("pt-br", {
                   style: "currency",
                   currency: "BRL",
                 })}
@@ -44,7 +44,7 @@ function FloatingCart() {
         <h3>Valor total:</h3>
         <span>
           {cartArr
-            .reduce((acc, item) => acc + item.preco_desconto, 0)
+            .reduce((acc, item) => acc + item.price_with_discount, 0)
             .toLocaleString("pt-br", {
               style: "currency",
               currency: "BRL",
