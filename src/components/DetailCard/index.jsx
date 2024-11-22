@@ -7,8 +7,9 @@ import { ProductContext } from "../../contexts/ProductsContext";
 import { useNavigate } from "react-router-dom";
 
 function DetailCard({ product }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { cartArr, setCartArr } = useContext(ProductContext);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
     if (localStorage.getItem("cart") !== "[]") {
@@ -26,10 +27,14 @@ function DetailCard({ product }) {
     setActiveIndex(selectedIndex);
   };
 
+  const handleButtonClick = (index) => {
+    setSelectedIndex(index);
+  };
+
   return (
     <>
       <p className="nav-page">
-        Home / Produtos / Tenis / {product.marca} / {product.nome}
+        Home / Produtos / {product.mark} / {product.name}
       </p>
       <div className="detail-container">
         <div className="slides-container">
@@ -41,18 +46,18 @@ function DetailCard({ product }) {
             indicators={false}
             className="carousel-div"
           >
-            {product.backgrounds.map((item, i) => (
+            {product.images.map((item, i) => (
               <Carousel.Item key={i}>
                 <div>
-                  <div style={{ backgroundColor: item }} className="img-box">
-                    <img src={product.imagem_url} alt="" />
+                  <div className="img-box">
+                    <img src={item.path} alt="" />
                   </div>
                 </div>
               </Carousel.Item>
             ))}
           </Carousel>
           <div className="custom-indicators">
-            {product.backgrounds.map((item, i) => (
+            {product.images.map((item, i) => (
               <div
                 key={i}
                 className={`indicator ${i === activeIndex ? "active" : ""}`}
@@ -61,18 +66,13 @@ function DetailCard({ product }) {
                 <div
                   className="preview"
                   style={{
-                    backgroundColor: item,
                     border: i === activeIndex ? "2px solid #C92071" : "none",
                   }}
                 >
                   <img
-                    src={product.imagem_url}
+                    className="indicators-img"
+                    src={item.path}
                     alt={`Preview ${i}`}
-                    style={{
-                      maxWidth: "100%",
-                      maxHeight: "100%",
-                      objectFit: "cover",
-                    }}
                   />
                 </div>
               </div>
@@ -80,10 +80,10 @@ function DetailCard({ product }) {
           </div>
         </div>
         <div className="detail-box">
-          <h3>{product.nome}</h3>
+          <h3>{product.name}</h3>
           <div className="type-product">
             <p>
-              {product.modelo} | {product.marca} | REF: {product.referencia}
+              {product.modelo} | {product.mark} | REF:38416711
             </p>
           </div>
           <div className="avaliation-box">
@@ -93,39 +93,47 @@ function DetailCard({ product }) {
           </div>
           <div className="price-box">
             <p>
-              R$ <span>{product.preco_desconto}</span>, 00
+              <span>
+                {product.price_with_discount.toLocaleString("pt-br", {
+                  style: "currency",
+                  currency: "BRL",
+                })}
+              </span>
+              ,
             </p>
-            <span className="old-price">{product.preco_original}</span>
+            <span className="old-price">{product.price}</span>
           </div>
           <div className="description-box">
             <h5>Descrição do produto</h5>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
-              amet cum minus corrupti, est, ab animi tempore rem atque, sint
-              voluptas? Rerum officia sit facere! Non exercitationem obcaecati
-              deserunt inventore.
-            </p>
+            <p>{product.description}</p>
           </div>
           <div className="size-shoes">
             <h5>Tamanho</h5>
             <div className="size-button">
-              {product.tamanhos.map((item, i) => (
-                <button key={i}>{item}</button>
+              {product.options[0].values.map((item, i) => (
+                <button
+                  onClick={() => handleButtonClick(i)}
+                  className={selectedIndex === i ? "active-button" : ""}
+                  key={i}
+                >
+                  {item}
+                </button>
               ))}
             </div>
           </div>
           <div className="color-shoes">
             <h5>Cor</h5>
             <div className="color-button">
-              {product.cores.map((item, i) => (
-                <button key={i} style={{ backgroundColor: item }}></button>
-              ))}
+              <button style={{ backgroundColor: "#00FF00" }}></button>
+              <button style={{ backgroundColor: "#FF00FF" }}></button>
+              <button style={{ backgroundColor: "#800000" }}></button>
+              <button style={{ backgroundColor: "#0000FF" }}></button>
             </div>
           </div>
           <button
             onClick={() => {
-              setCartArr([...cartArr, product])
-              navigate("/products/cart")
+              setCartArr([...cartArr, product]);
+              navigate("/products/cart");
             }}
             className="buy-button"
           >

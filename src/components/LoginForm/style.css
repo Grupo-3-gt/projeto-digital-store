@@ -19,16 +19,18 @@
   display: flex;
   position: relative;
   flex: 1 1 50%;
+  max-width: 100%;
 }
 
 .login-page-image img {
   width: 60%;
   position: absolute;
+  max-width: 100%;
 }
 
 .login-page-image img:nth-child(2) {
   transform: rotate(10deg);
-  left: 260px;
+  left: 33%;
   top: 118px;
 }
 
@@ -89,6 +91,10 @@
   size: 16px;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-icons {
@@ -111,13 +117,16 @@
   .login-page-image {
     display: none;
   }
+
   .form-content {
     margin-top: 30px;
   }
+
   .login-icons{
     display: flex;
     flex-direction: column;
   }
+
   .login-icons div{
     display: flex;
     gap: 10px;

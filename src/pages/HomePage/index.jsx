@@ -5,12 +5,17 @@ import "./style.css";
 import CarouselComponent from "../../components/Carousel";
 import Collection from "../../components/Collection";
 import Card from "../../components/ProductCard";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 function HomePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const { user } = useContext(UserContext);
+
+  console.log(user);
 
   return (
     <div>
@@ -18,7 +23,7 @@ function HomePage() {
       <main>
         <CarouselComponent />
         <Collection />
-        <Card itemNum={8} />
+        <Card itemNum={8} text="Produtos em alta" />
         <Offer />
       </main>
       <Footer />

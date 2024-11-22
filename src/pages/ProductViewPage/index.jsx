@@ -34,7 +34,7 @@ function ProductViewPage() {
       <main>
         <div className="main-box-detail">
           <DetailCard product={product} />
-          <Card itemNum={4} />
+          <Card itemNum={4} text="Produtos Relacionados"/>
         </div>
       </main>
       <Footer />

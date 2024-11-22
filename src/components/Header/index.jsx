@@ -6,6 +6,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import ModalMenu from "../Modals/ModalMenu";
 import { ProductContext } from "../../contexts/ProductsContext";
+import FloatingCart from "../FloatingCart";
+import { UserContext } from "../../contexts/UserContext";
+import userIcon from "../../assets/img/svg/Vector.svg";
 
 function Header() {
   const [menu, setMenu] = useState(false);
@@ -13,6 +16,8 @@ function Header() {
   const [page, setPage] = useState(location.pathname);
   const navigate = useNavigate();
   const { cartArr, setCartArr } = useContext(ProductContext);
+  const { user } = useContext(UserContext);
+  const [openCart, setOpenCart] = useState(false);
 
   useEffect(() => {
     if (localStorage.getItem("cart") !== "[]") {
@@ -68,19 +73,33 @@ function Header() {
                 : "div-buttons"
             }
           >
-            <Link to="/register">Cadastre-se</Link>
-            <Link to="/login">Entrar</Link>
+            {!user ? (
+              <>
+                <Link to="/register">Cadastre-se</Link>
+                <Link to="/login">Entrar</Link>
+              </>
+            ) : (
+              <div className="user-info">
+                <img src={userIcon} alt="" /> <p>Olá {user.first_name}</p>
+              </div>
+            )}
           </div>
-          <button
-            className={
-              page.includes("login") || page.includes("register")
-                ? "display-none"
-                : "button-cart"
-            }
-          >
-            <img src={cartIcon} alt="" />
-            {cartArr.length !== 0 && <p className="cart-quantity">{cartArr.length}</p>}
-          </button>
+          <div className="div-cart-button">
+            <button
+              onClick={() => setOpenCart(!openCart)}
+              className={
+                page.includes("login") || page.includes("register")
+                  ? "display-none"
+                  : "button-cart"
+              }
+            >
+              <img src={cartIcon} alt="" />
+              {cartArr.length !== 0 && (
+                <p className="cart-quantity">{cartArr.length}</p>
+              )}
+            </button>
+            {cartArr.length !== 0 && openCart && <FloatingCart />}
+          </div>
         </div>
         <nav
           className={
@@ -93,9 +112,7 @@ function Header() {
             Home
           </Link>
           <Link
-            className={
-              page.includes("products") ? "page-active" : ""
-            }
+            className={page.includes("products") ? "page-active" : ""}
             to="/products"
           >
             Produtos

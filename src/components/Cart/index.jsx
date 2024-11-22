@@ -12,14 +12,12 @@ function Cart() {
   }, []);
 
   const removeItemByIndex = (index) => {
-    const updatedCart = cartArr.filter((_, i) => i !== index); // Exclui o item pelo índice
+    const updatedCart = cartArr.filter((_, i) => i !== index);
     setCartArr(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart)); // Atualiza o localStorage
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  const total = cartArr.reduce((acc, item) => acc + item.preco_desconto, 0);
-
-  console.log(total);
+  const total = cartArr.reduce((acc, item) => acc + item.price, 0);
 
   return (
     <>
@@ -40,10 +38,10 @@ function Cart() {
                 <>
                   <div className="description-orders">
                     <div className="background-img-cart">
-                      <img src={item.imagem_url} alt="produto" />
+                      <img src={item.images[0].path} alt="produto" />
                     </div>
                     <div className="info-cart-oders">
-                      <h5>{item.nome}</h5>
+                      <h5>{item.name}</h5>
                       <h4>
                         Cor: <span></span>
                       </h4>
@@ -61,17 +59,22 @@ function Cart() {
                         <h6>{count}</h6>
                         <button onClick={() => setCount(count + 1)}>+</button>
                       </div>
-                      <button className="bnt-remove" onClick={() => removeItemByIndex(index)}>Remover item</button>
+                      <button
+                        className="bnt-remove"
+                        onClick={() => removeItemByIndex(index)}
+                      >
+                        Remover item
+                      </button>
                     </div>
                     <div className="unit-orders">
                       <h3>
-                        {item.preco_original.toLocaleString("pt-br", {
+                        {item.price_with_discount.toLocaleString("pt-br", {
                           style: "currency",
                           currency: "BRL",
                         })}
                       </h3>
                       <h2>
-                        {item.preco_desconto.toLocaleString("pt-br", {
+                        {item.price.toLocaleString("pt-br", {
                           style: "currency",
                           currency: "BRL",
                         })}
@@ -79,13 +82,13 @@ function Cart() {
                     </div>
                     <div className="total-orders">
                       <h3>
-                        {(item.preco_original * count).toLocaleString("pt-br", {
+                        {(item.price * count).toLocaleString("pt-br", {
                           style: "currency",
                           currency: "BRL",
                         })}
                       </h3>
                       <h2>
-                        {(item.preco_desconto * count).toLocaleString("pt-br", {
+                        {(item.price * count).toLocaleString("pt-br", {
                           style: "currency",
                           currency: "BRL",
                         })}
@@ -119,10 +122,14 @@ function Cart() {
           <h2>RESUMO</h2>
           <div className="resume-price">
             <p>
-              Subtotal: <span> {(total * count).toLocaleString("pt-br", {
+              Subtotal:{" "}
+              <span>
+                {" "}
+                {(total * count).toLocaleString("pt-br", {
                   style: "currency",
                   currency: "BRL",
-                })}</span>
+                })}
+              </span>
             </p>
             <p>
               Frete: <span>R$0,00</span>

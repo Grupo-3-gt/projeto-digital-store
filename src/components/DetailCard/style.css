@@ -161,6 +161,7 @@ h5 {
   justify-content: center;
   width: 100%;
   height: 571px;
+  background-color: var(--white);
 }
 
 .img-box img {
@@ -180,8 +181,19 @@ h5 {
   cursor: pointer;
 }
 
+.indicators-img {
+  max-width: 100%;
+  max-height: 130px;
+  object-fit: cover;
+}
+
 .preview {
   border-radius: 4px;
+}
+
+.size-button button.active-button {
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 @media (max-width: 652px) {
@@ -193,7 +205,10 @@ h5 {
 
   .detail-box {
     max-height: none;
-    margin-top: 100px;
+  }
+
+  .slides-container {
+    margin-bottom: 150px;
   }
 
   .custom-indicators {

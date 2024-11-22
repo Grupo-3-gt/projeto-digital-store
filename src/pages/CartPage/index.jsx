@@ -1,26 +1,25 @@
 import { useEffect } from "react";
-import "./style.css"
+import "./style.css";
 import Cart from "../../components/Cart";
 import Header from "../../components/Header";
 import Card from "../../components/ProductCard";
 import Footer from "../../components/Footer";
 
+function CartPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-function CartPage () {
-        useEffect(() => {
-          window.scrollTo(0, 0);
-        }, [])
-    
-    return (
-        <div>
+  return (
+    <div>
       <Header />
       <main>
         <Cart />
         <Card itemNum={4} />
       </main>
-      <Footer/>
+      <Footer />
     </div>
-    )
+  );
 }
 
-export default CartPage
+export default CartPage;
