@@ -7,10 +7,10 @@
 
 .container-cart {
   background-color: var(--white);
-  max-width: 55.625rem;
+  max-width: 890px;
   height: min-content;
-  border-radius: 0.5rem;
-  padding: 0 2rem 0 2rem;
+  border-radius: 8px;
+  padding: 0 32px 0 32px;
   border: 1px solid transparent;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -27,15 +27,15 @@
 
 .box-cart {
   display: flex;
-  height: 2rem;
-  margin-top: 1.5rem;
+  height: 32px;
+  margin-top: 24px;
 }
 
 .box-cart h3 {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_bold);
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 14px;
+  line-height: 24px;
   letter-spacing: 0.75px;
   color: var(--black);
   margin: auto auto auto 0;
@@ -44,11 +44,11 @@
 .box-cart h4 {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_normal);
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 14px;
+  line-height: 24px;
   letter-spacing: 0.75px;
   color: var(--black);
-  margin: auto 2rem auto 0.5rem;
+  margin: auto 32px auto 8px;
 }
 
 .description-orders {
@@ -57,59 +57,59 @@
 
 .background-img-cart {
   background-color: #e2e3ff;
-  width: 8rem;
-  height: 6.5rem;
+  width: 128px;
+  height: 104px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
-  margin-right: 1rem;
+  border-radius: 8px;
+  margin-right: 16px;
 }
 
 .description-orders img {
-  width: 5.62rem;
+  width: 90px;
   height: auto;
 }
 
 .info-cart-oders h4 {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_normal);
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 14px;
+  line-height: 22px;
   letter-spacing: 0.25px;
   color: var(--light-gray);
-  margin: auto 2rem 0.5rem 0.2rem;
+  margin: auto 32px 8px 3.2px;
 }
 
 .info-cart-oders h6 {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_normal);
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 14px;
+  line-height: 22px;
   letter-spacing: 0.25px;
   color: var(--light-gray);
-  margin: auto 2rem 0 0.2rem;
+  margin: auto 32px 0 3.2px;
 }
 
 .info-cart-oders span {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_normal);
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 14px;
+  line-height: 22px;
   letter-spacing: 0.25px;
   color: var(--black);
-  margin-left: 0.2rem;
+  margin-left: 3.2px;
 }
 
 .info-cart-oders h5 {
-  width: 13.6875rem;
+  width: 219px;
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_bold);
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 14px;
+  line-height: 22px;
   letter-spacing: 0.75px;
   color: var(--black);
-  margin: auto 2rem 0.5rem 0.2rem;
+  margin: auto 32px 8px 3.2px;
 }
 
 .quantity-orders {
@@ -117,7 +117,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 0 1rem 0 auto;
+  margin: 0 16px 0 auto;
 }
 
 .quantity-orders a {
@@ -128,8 +128,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+  gap: 24px;
+  margin-bottom: 16px;
 }
 
 .order-counter h6 {
@@ -139,13 +139,13 @@
 
 .order-counter button {
   background-color: var(--white);
-  border-radius: 0.5rem;
+  border-radius: 8px;
   border: 1px var(--light-gray-2) solid;
-  width: 2.1875rem;
-  height: 2.1875rem;
+  width: 35px;
+  height: 35px;
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_bold);
-  font-size: 1.2rem;
+  font-size: 19.2px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -167,15 +167,15 @@
 }
 
 .unit-orders {
-  width: 5.375rem;
-  margin: 0 0.5rem 0 0.5rem;
+  width: 86px;
+  margin: 0 8px 0 8px;
 }
 
 .unit-orders h2 {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_bold);
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0.75px;
   color: var(--black);
   text-align: center;
@@ -184,8 +184,8 @@
 .unit-orders h3 {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_normal);
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 14px;
+  line-height: 24px;
   letter-spacing: 0.75px;
   color: var(--light-gray-2);
   text-align: center;
@@ -193,15 +193,15 @@
 }
 
 .total-orders {
-  width: 5.375rem;
-  margin: 0 0.6rem 0 0.5rem;
+  width: 86px;
+  margin: 0 9.6px 0 8px;
 }
 
 .total-orders h2 {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_bold);
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0.75px;
   color: var(--black);
   text-align: center;
@@ -210,8 +210,8 @@
 .total-orders h3 {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_normal);
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 14px;
+  line-height: 24px;
   letter-spacing: 0.75px;
   color: var(--light-gray-2);
   text-align: center;
@@ -227,8 +227,8 @@
 .discount-voucher h2 {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_bold);
-  font-size: 0.75rem;
-  line-height: 1.5rem;
+  font-size: 12px;
+  line-height: 24px;
   letter-spacing: 0.75px;
   color: var(--black);
   text-align: flex-start;
@@ -240,10 +240,10 @@
 
 .search-cart input {
   background-color: var(--light-gray-4);
-  width: 16.875rem;
-  height: 3.75rem;
-  border-radius: 0.5rem;
-  padding-left: 1rem;
+  width: 270px;
+  height: 60px;
+  border-radius: 8px;
+  padding-left: 16px;
   border: none;
   outline: none;
 }
@@ -251,8 +251,8 @@
 .search-cart input::placeholder {
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_normal);
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0.75px;
   color: var(--dark-gray-3);
 }
@@ -260,17 +260,17 @@
 .search-cart button {
   background-color: var(--light-gray-4);
   color: var(--primary);
-  width: 7.125rem;
-  height: 3.75rem;
-  border-radius: 0.5rem;
+  width: 114px;
+  height: 60px;
+  border-radius: 8px;
   border: none;
   outline: none;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 8px;
+  margin-right: 8px;
   font-family: var(--font_primaria);
   font-weight: var(--font_weight_bold);
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0.75px;
   transition: 0.3s ease;
 }
